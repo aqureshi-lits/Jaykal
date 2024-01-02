@@ -1,0 +1,544 @@
+report 80067 "Bank Book"
+{
+    // version Firoz
+
+    DefaultLayout = RDLC;
+    RDLCLayout = './Src/Layout/RGS Reports/Bank Book.rdlc';
+    Caption = 'Bank Book';
+
+    dataset
+    {
+        dataitem("Bank Account"; "Bank Account")
+        {
+            DataItemTableView = SORTING("No.")
+                                ORDER(Ascending);
+            RequestFilterFields = "No.", "Date Filter", "Global Dimension 1 Filter", "Global Dimension 2 Filter";
+            column(FORMAT_TODAY_0_4_; FORMAT(TODAY, 0, 4))
+            {
+            }
+            column(CompInfo_Name; CompInfo.Name)
+            {
+            }
+            column(CurrReport_PAGENO; CurrReport.PAGENO)
+            {
+            }
+            column(USERID; USERID)
+            {
+            }
+            column(Bank_Account_Name; Name)
+            {
+            }
+            column(GETFILTERS; GETFILTERS)
+            {
+            }
+            column(LocationFilter; LocationFilter)
+            {
+            }
+            column(Bank_Book_; 'Bank Book')
+            {
+            }
+            column(Opening_Balance_As_On_______FORMAT_GETRANGEMIN__Date_Filter___; 'Opening Balance As On' + ' ' + FORMAT(GETRANGEMIN("Date Filter")))
+            {
+            }
+            column(OpeningDRBal; OpeningDRBal)
+            {
+            }
+            column(OpeningCRBal; OpeningCRBal)
+            {
+            }
+            column(ABS_OpeningDRBal_OpeningCRBal_; ABS(OpeningDRBal - OpeningCRBal))
+            {
+            }
+            column(DrCrTextBalance; DrCrTextBalance)
+            {
+            }
+            column(OpeningCRBal_TransCredits; OpeningCRBal + TransCredits)
+            {
+            }
+            column(OpeningDRBal_TransDebits; OpeningDRBal + TransDebits)
+            {
+            }
+            column(ABS_OpeningDRBal_OpeningCRBal_TransDebits_TransCredits_; ABS(OpeningDRBal - OpeningCRBal + TransDebits - TransCredits))
+            {
+            }
+            column(DrCrTextBalance_Control1500007; DrCrTextBalance)
+            {
+            }
+            column(TransDebits; TransDebits)
+            {
+            }
+            column(TransCredits; TransCredits)
+            {
+            }
+            column(Bank_Account_No_; "No.")
+            {
+            }
+            column(Bank_Account_Date_Filter; "Date Filter")
+            {
+            }
+            column(Bank_Account_Global_Dimension_1_Filter; "Global Dimension 1 Filter")
+            {
+            }
+            column(Bank_Account_Global_Dimension_2_Filter; "Global Dimension 2 Filter")
+            {
+            }
+            column(CurrReport_PAGENOCaption; CurrReport_PAGENOCaptionLbl)
+            {
+            }
+            column(Posting_DateCaption; Posting_DateCaptionLbl)
+            {
+            }
+            column(Document_No_Caption; Document_No_CaptionLbl)
+            {
+            }
+            column(Debit_AmountCaption; Debit_AmountCaptionLbl)
+            {
+            }
+            column(Credit_AmountCaption; Credit_AmountCaptionLbl)
+            {
+            }
+            column(Account_NameCaption; Account_NameCaptionLbl)
+            {
+            }
+            column(BalanceCaption; BalanceCaptionLbl)
+            {
+            }
+            column(Voucher_TypeCaption; Voucher_TypeCaptionLbl)
+            {
+            }
+            column(Location_CodeCaption; Location_CodeCaptionLbl)
+            {
+            }
+            column(Cheque_NoCaption; Cheque_NoCaptionLbl)
+            {
+            }
+            column(Cheque_DateCaption; Cheque_DateCaptionLbl)
+            {
+            }
+            column(Closing_BalanceCaption; Closing_BalanceCaptionLbl)
+            {
+            }
+            dataitem("Bank Account Ledger Entry"; "Bank Account Ledger Entry")
+            {
+                DataItemLink = "Bank Account No." = FIELD("No."),
+                               "Posting Date" = FIELD("Date Filter");
+                DataItemTableView = SORTING("Bank Account No.", "Posting Date")
+                                    ORDER(Ascending);
+                column(Bank_Account_Ledger_Entry_Entry_No_; "Entry No.")
+                {
+                }
+                column(Bank_Account_Ledger_Entry_Bank_Account_No_; "Bank Account No.")
+                {
+                }
+                column(Bank_Account_Ledger_Entry_Posting_Date; "Posting Date")
+                {
+                }
+                column(Bank_Account_Ledger_Entry_Global_Dimension_1_Code; "Global Dimension 1 Code")
+                {
+                }
+                column(Bank_Account_Ledger_Entry_Global_Dimension_2_Code; "Global Dimension 2 Code")
+                {
+                }
+                dataitem("G/L Entry"; "G/L Entry")
+                {
+                    DataItemLink = "Entry No." = FIELD("Entry No.");
+                    DataItemTableView = SORTING("G/L Account No.", "Posting Date")
+                                        ORDER(Ascending);
+                    column(G_L_Entry__Posting_Date_; FORMAT("Posting Date"))
+                    {
+                    }
+                    column(G_L_Entry__Document_No__; "Document No.")
+                    {
+                    }
+                    column(AccountName; AccountName)
+                    {
+                    }
+                    column(G_L_Entry__Debit_Amount_; "Debit Amount")
+                    {
+                    }
+                    column(G_L_Entry__Credit_Amount_; "Credit Amount")
+                    {
+                    }
+                    column(ABS_OpeningDRBal_OpeningCRBal_TransDebits_TransCredits__Control1500026; ABS(OpeningDRBal - OpeningCRBal + TransDebits - TransCredits))
+                    {
+                    }
+                    column(SourceDesc; SourceDesc)
+                    {
+                    }
+                    column(DrCrTextBalance_Control1500065; DrCrTextBalance)
+                    {
+                    }
+                    column(Bank_Account_Ledger_Entry___Cheque_No__; "Bank Account Ledger Entry"."External Document No.")
+                    {
+                    }
+                    column(Bank_Account_Ledger_Entry___Cheque_Date_; "Bank Account Ledger Entry"."Closed at Date")
+                    {
+                    }
+                    column(OneEntryRecord; OneEntryRecord)
+                    {
+                    }
+                    column(G_L_Entry_Entry_No_; "Entry No.")
+                    {
+                    }
+                    column(G_L_Entry_Transaction_No_; "Transaction No.")
+                    {
+                    }
+                    dataitem(DataItem5444; Integer)
+                    {
+                        DataItemTableView = SORTING(Number);
+                        column(GLEntry__Posting_Date_; FORMAT(GLEntry."Posting Date"))
+                        {
+                        }
+                        column(GLEntry__Document_No__; GLEntry."Document No.")
+                        {
+                        }
+                        column(AccountName_Control1500018; AccountName)
+                        {
+                        }
+                        column(G_L_Entry___Debit_Amount_; "G/L Entry"."Debit Amount")
+                        {
+                        }
+                        column(G_L_Entry___Credit_Amount_; "G/L Entry"."Credit Amount")
+                        {
+                        }
+                        column(ABS_DetailAmt_; ABS(DetailAmt))
+                        {
+                        }
+                        column(ABS_OpeningDRBal_OpeningCRBal_TransDebits_TransCredits__Control1500049; ABS(OpeningDRBal - OpeningCRBal + TransDebits - TransCredits))
+                        {
+                        }
+                        column(SourceDesc_Control1500036; SourceDesc)
+                        {
+                        }
+                        column(DrCrText; DrCrText)
+                        {
+                        }
+                        column(DrCrTextBalance_Control1500067; DrCrTextBalance)
+                        {
+                        }
+                        column(Bank_Account_Ledger_Entry___Cheque_No___Control1500021; "Bank Account Ledger Entry"."Closed at Date")
+                        {
+                        }
+                        column(Bank_Account_Ledger_Entry___Cheque_Date__Control1500023; "Bank Account Ledger Entry"."Closed at Date")
+                        {
+                        }
+                        column(AccountName_Control1500042; AccountName)
+                        {
+                        }
+                        column(ABS_GLEntry_Amount_; ABS(GLEntry.Amount))
+                        {
+                        }
+                        column(DrCrText_Control1500056; DrCrText)
+                        {
+                        }
+                        column(FirstRecord; FirstRecord)
+                        {
+                        }
+                        column(PrintDetail; PrintDetail)
+                        {
+                        }
+                        column(Integer_Number; Number)
+                        {
+                        }
+
+                        trigger OnAfterGetRecord()
+                        begin
+                            DrCrText := '';
+                            IF Number > 1 THEN BEGIN
+                                FirstRecord := FALSE;
+                                GLEntry.NEXT;
+                            END;
+
+                            IF FirstRecord THEN BEGIN
+                                DetailAmt := 0;
+                                IF PrintDetail THEN
+                                    DetailAmt := GLEntry.Amount;
+
+                                IF DetailAmt > 0 THEN
+                                    DrCrText := Text16501;
+                                IF DetailAmt < 0 THEN
+                                    DrCrText := Text16502;
+
+                                IF NOT PrintDetail THEN
+                                    AccountName := Text16500
+                                ELSE
+                                    //AccountName := Daybook.FindGLAccName(GLEntry."Source Type", GLEntry."Entry No.", GLEntry."Source No.", GLEntry."G/L Account No.");
+
+
+                                    DrCrTextBalance := '';
+                                IF OpeningDRBal - OpeningCRBal + TransDebits - TransCredits > 0 THEN
+                                    DrCrTextBalance := Text16501;
+                                IF OpeningDRBal - OpeningCRBal + TransDebits - TransCredits < 0 THEN
+                                    DrCrTextBalance := Text16502;
+                            END ELSE
+                                IF PrintDetail AND (NOT FirstRecord) THEN BEGIN
+                                    IF GLEntry.Amount > 0 THEN
+                                        DrCrText := Text16501;
+                                    IF GLEntry.Amount < 0 THEN
+                                        DrCrText := Text16502;
+                                    // AccountName :=
+                                    //   Daybook.FindGLAccName(GLEntry."Source Type", GLEntry."Entry No.", GLEntry."Source No.", GLEntry."G/L Account No.");
+                                END;
+                        end;
+
+                        trigger OnPreDataItem()
+                        begin
+                            SETRANGE(Number, 1, GLEntry.COUNT);
+                            FirstRecord := TRUE;
+
+                            IF GLEntry.COUNT = 1 THEN
+                                CurrReport.BREAK;
+                        end;
+                    }
+                    // dataitem(DataItem5326; Table50022)
+                    // {
+                    //     DataItemLink = Entry No.=FIELD(Entry No.);
+                    //     DataItemLinkReference = "G/L Entry";
+                    //     DataItemTableView = SORTING(Entry No., Transaction No., Line No.)
+                    //                         ORDER(Ascending)
+                    //                         WHERE(Entry No.=FILTER(<>0));
+                    //     column(Posted_Narration_Narration;Narration)
+                    //     {
+                    //     }
+                    //     column(Posted_Narration_Entry_No_;"Entry No.")
+                    //     {
+                    //     }
+                    //     column(Posted_Narration_Transaction_No_;"Transaction No.")
+                    //     {
+                    //     }
+                    //     column(Posted_Narration_Line_No_;"Line No.")
+                    //     {
+                    //     }
+
+                    //     trigger OnPreDataItem()
+                    //     begin
+                    //         IF NOT PrintLineNarration THEN
+                    //           CurrReport.BREAK;
+                    //     end;
+                    // }
+                    // dataitem(PostedNarration1; Table50022)
+                    // {
+                    //     DataItemLink = Transaction No.=FIELD(Transaction No.);
+                    //     DataItemTableView = SORTING(Entry No., Transaction No., Line No.)
+                    //                         WHERE(Entry No.=FILTER(0));
+                    //     column(PostedNarration1_Narration;Narration)
+                    //     {
+                    //     }
+                    //     column(PostedNarration1_Entry_No_;"Entry No.")
+                    //     {
+                    //     }
+                    //     column(PostedNarration1_Transaction_No_;"Transaction No.")
+                    //     {
+                    //     }
+                    //     column(PostedNarration1_Line_No_;"Line No.")
+                    //     {
+                    //     }
+
+                    //     trigger OnPreDataItem()
+                    //     begin
+                    //         IF NOT PrintVchNarration THEN
+                    //           CurrReport.BREAK;
+
+                    //         GLEntry2.RESET;
+                    //         GLEntry2.SETCURRENTKEY("Posting Date","Source Code","Transaction No.");
+                    //         GLEntry2.SETRANGE("Posting Date","G/L Entry"."Posting Date");
+                    //         GLEntry2.SETRANGE("Source Code","G/L Entry"."Source Code");
+                    //         GLEntry2.SETRANGE("Transaction No.","G/L Entry"."Transaction No.");
+                    //         GLEntry2.SETRANGE("G/L Account No.","G/L Entry"."G/L Account No.");
+                    //         GLEntry2.FINDLAST;
+                    //         IF NOT (GLEntry2."Entry No." = "G/L Entry"."Entry No.") THEN
+                    //           CurrReport.BREAK;
+                    //     end;
+                    // }
+
+                    trigger OnAfterGetRecord()
+                    begin
+                        GLEntry.SETRANGE("Transaction No.", "Transaction No.");
+                        GLEntry.SETFILTER("Entry No.", '<>%1', "Entry No.");
+                        IF GLEntry.FIND('-') THEN;
+
+                        DrCrText := '';
+                        OneEntryRecord := TRUE;
+                        IF GLEntry.COUNT > 1 THEN
+                            OneEntryRecord := FALSE;
+
+                        IF Amount > 0 THEN
+                            TransDebits := TransDebits + Amount;
+                        IF Amount < 0 THEN
+                            TransCredits := TransCredits - Amount;
+
+                        SourceDesc := '';
+                        IF "Source Code" <> '' THEN BEGIN
+                            SourceCode.GET("Source Code");
+                            SourceDesc := SourceCode.Description;
+                        END;
+
+                        AccountName := '';
+                        IF OneEntryRecord THEN BEGIN
+                            // AccountName := Daybook.FindGLAccName(GLEntry."Source Type", GLEntry."Entry No.", GLEntry."Source No.", GLEntry."G/L Account No.");
+
+                            DrCrTextBalance := '';
+                            IF OpeningDRBal - OpeningCRBal + TransDebits - TransCredits > 0 THEN
+                                DrCrTextBalance := Text16501;
+                            IF OpeningDRBal - OpeningCRBal + TransDebits - TransCredits < 0 THEN
+                                DrCrTextBalance := Text16502;
+                        END;
+
+                        IF BankAccountNo = "Bank Account"."No." THEN BEGIN
+                            DrCrTextBalance := '';
+                            IF OpeningDRBal - OpeningCRBal + TransDebits - TransCredits > 0 THEN
+                                DrCrTextBalance := Text16501;
+                            IF OpeningDRBal - OpeningCRBal + TransDebits - TransCredits < 0 THEN
+                                DrCrTextBalance := Text16502;
+                        END;
+                    end;
+
+                    trigger OnPreDataItem()
+                    begin
+                        GLEntry.RESET;
+                        GLEntry.SETCURRENTKEY("Transaction No.");
+                    end;
+                }
+            }
+
+            trigger OnAfterGetRecord()
+            begin
+                TransDebits := 0;
+                TransCredits := 0;
+
+                // VoucherAccount.SETRANGE("Account No.", "No.");
+                // IF NOT VoucherAccount.FINDFIRST THEN
+                //     CurrReport.SKIP;
+
+                IF BankAccountNo <> "No." THEN BEGIN
+                    OpeningDRBal := 0;
+                    OpeningCRBal := 0;
+
+                    BankAccLedgEntry.RESET;
+                    BankAccLedgEntry.SETCURRENTKEY("Bank Account No.", "Global Dimension 1 Code",
+                      "Global Dimension 2 Code", "Posting Date");
+                    BankAccLedgEntry.SETRANGE("Bank Account No.", "No.");
+                    BankAccLedgEntry.SETFILTER("Posting Date", '%1..%2', 0D, NORMALDATE(GETRANGEMIN("Date Filter")) - 1);
+                    IF "Global Dimension 1 Filter" <> '' THEN
+                        BankAccLedgEntry.SETFILTER("Global Dimension 1 Code", "Global Dimension 1 Filter");
+                    IF "Global Dimension 2 Filter" <> '' THEN
+                        BankAccLedgEntry.SETFILTER("Global Dimension 2 Code", "Global Dimension 2 Filter");
+
+                    BankAccLedgEntry.CALCSUMS("Amount (LCY)");
+                    IF BankAccLedgEntry."Amount (LCY)" > 0 THEN
+                        OpeningDRBal := BankAccLedgEntry."Amount (LCY)";
+                    IF BankAccLedgEntry."Amount (LCY)" < 0 THEN
+                        OpeningCRBal := -BankAccLedgEntry."Amount (LCY)";
+
+                    DrCrTextBalance := '';
+                    IF OpeningDRBal - OpeningCRBal > 0 THEN
+                        DrCrTextBalance := Text16501;
+                    IF OpeningDRBal - OpeningCRBal < 0 THEN
+                        DrCrTextBalance := Text16502;
+
+                    BankAccountNo := "No.";
+                END;
+            end;
+
+            trigger OnPreDataItem()
+            begin
+                // VoucherAccount.SETFILTER("Sub Type", '%1|%2',
+                //   VoucherAccount."Sub Type"::"Bank Payment Voucher",
+                //   VoucherAccount."Sub Type"::"Bank Receipt Voucher");
+                // VoucherAccount.SETRANGE("Account Type", VoucherAccount."Account Type"::"Bank Account");
+            end;
+        }
+    }
+
+    requestpage
+    {
+
+        layout
+        {
+            area(content)
+            {
+                group(Options)
+                {
+                    Caption = 'Options';
+                    field(PrintDetail; PrintDetail)
+                    {
+                        Caption = 'Print Detail';
+                    }
+                    field(PrintLineNarration; PrintLineNarration)
+                    {
+                        Caption = 'Print Line Narration';
+                    }
+                    field(PrintVchNarration; PrintVchNarration)
+                    {
+                        Caption = 'Print Voucher Narration';
+                    }
+                    field(LocationCode; LocationCode)
+                    {
+                        Caption = 'Location Code';
+                        TableRelation = Location;
+                    }
+                }
+            }
+        }
+
+        actions
+        {
+        }
+    }
+
+    labels
+    {
+    }
+
+    trigger OnInitReport()
+    begin
+        BankAccountNo := '';
+    end;
+
+    trigger OnPreReport()
+    begin
+        CompInfo.GET;
+    end;
+
+    var
+        CompInfo: Record 79;
+        GLEntry: Record 17;
+        GLEntry2: Record 17;
+        // VoucherAccount: Record 50026;
+        SourceCode: Record 230;
+        BankAccLedgEntry: Record 271;
+        //Daybook: Report 50068;
+        OpeningDRBal: Decimal;
+        OpeningCRBal: Decimal;
+        TransDebits: Decimal;
+        TransCredits: Decimal;
+        OneEntryRecord: Boolean;
+        FirstRecord: Boolean;
+        PrintDetail: Boolean;
+        PrintLineNarration: Boolean;
+        PrintVchNarration: Boolean;
+        DetailAmt: Decimal;
+        AccountName: Text[100];
+        SourceDesc: Text[100];
+        DrCrText: Text[2];
+        DrCrTextBalance: Text[2];
+        LocationCode: Code[10];
+        LocationFilter: Text[100];
+        Text16500: Label 'As per Details';
+        BankAccountNo: Code[50];
+        Text16501: Label 'Dr';
+        Text16502: Label 'Cr';
+        CurrReport_PAGENOCaptionLbl: Label 'Page';
+        Posting_DateCaptionLbl: Label 'Posting Date';
+        Document_No_CaptionLbl: Label 'Document No.';
+        Debit_AmountCaptionLbl: Label 'Debit Amount';
+        Credit_AmountCaptionLbl: Label 'Credit Amount';
+        Account_NameCaptionLbl: Label 'Account Name';
+        BalanceCaptionLbl: Label 'Balance';
+        Voucher_TypeCaptionLbl: Label 'Voucher Type';
+        Location_CodeCaptionLbl: Label 'Location Code';
+        Cheque_NoCaptionLbl: Label 'Cheque No';
+        Cheque_DateCaptionLbl: Label 'Cheque Date';
+        Closing_BalanceCaptionLbl: Label 'Closing Balance';
+}
+

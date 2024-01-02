@@ -1,0 +1,32 @@
+{
+  "id": "208a0d1f-1dad-446c-8d05-01825112b856",
+  "name": "NEKI Customizations",
+  "publisher": "LITS SERVICES",
+  "version": "23.0.0.3",
+  "brief": "NEKI Customizations for D365BC",
+  "description": "NEKI Customizations for D365BC",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "./Lits Logo/Lits_Logo_White.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "22.0.0.0",
+  "application": "22.0.0.0",
+  "idRanges": [
+    {
+      "from": 80000,
+      "to": 80999
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": true
+  },
+  "runtime": "11.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}

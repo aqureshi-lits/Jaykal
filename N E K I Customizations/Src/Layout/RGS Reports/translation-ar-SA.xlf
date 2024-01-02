@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="ar-SA" original="Please update this value">
+    <body>
+      <group id="body">
+        <trans-unit id="Report 819502634 - ReportDataItem 3046453112 - Property 62802879" size-unit="char" translate="yes" xml:space="preserve">
+          <source>DocumentNo_TempTabLine</source>
+          <target>DocumentNo_TempTabLine</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sales Invoice-Arabic - ReportDataItem DocumentNo_TempTabLine - Property OptionCaption</note>
+        </trans-unit>
+        <trans-unit id="Report 819502634 - NamedType 3980321846" size-unit="char" translate="yes" xml:space="preserve">
+          <source>???? ???? ?????? ???????? ????????</source>
+          <target>Resa Gulf </target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Sales Invoice-Arabic - NamedType CompName_CapArb</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>

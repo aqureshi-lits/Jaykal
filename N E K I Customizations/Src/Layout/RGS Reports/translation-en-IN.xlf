@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en-US" target-language="en-IN" original="Please update this value">
+    <body>
+      <group id="body">
+        <trans-unit id="Report 1206994156 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cash Book</source>
+          <target>Cash Book</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 3451217284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Detail</source>
+          <target>Print Detail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintDetail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 225329991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Line Narration</source>
+          <target>Print Line Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintLineNarration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 1833752562 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Voucher Narration</source>
+          <target>Print Voucher Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control PrintVchNarration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - Control 39415292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Code</source>
+          <target>Location Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - Control LocationCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 1610930417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>As per Details</source>
+          <target>As per Details</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType Text16500</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 650077689" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Page</source>
+          <target>Page</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType PageCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 443421780" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <target>Posting Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType PostingDateCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 3558753334" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target>Document No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType DocumentNoCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 4156440530" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount</source>
+          <target>Debit Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType DebitAmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 977154119" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount</source>
+          <target>Credit Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType CreditAmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 927834030" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target>Account Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType AccountNameCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 1653612302" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance</source>
+          <target>Balance</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType BalanceCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 2348472384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Type</source>
+          <target>Voucher Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType VoucherTypeCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 2383142400" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Code</source>
+          <target>Location Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType LocationCodeCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1206994156 - NamedType 142461339" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closing Balance</source>
+          <target>Closing Balance</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Cash Book - NamedType ClosingBalanceCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Bank Book</source>
+          <target>Bank Book</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 3451217284 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Detail</source>
+          <target>Print Detail</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintDetail - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 225329991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Line Narration</source>
+          <target>Print Line Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintLineNarration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 1833752562 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Print Voucher Narration</source>
+          <target>Print Voucher Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control PrintVchNarration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - Control 39415292 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Code</source>
+          <target>Location Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - Control LocationCode - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 1610930417" size-unit="char" translate="yes" xml:space="preserve">
+          <source>As per Details</source>
+          <target>As per Details</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Text16500</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 2248627034" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Dr</source>
+          <target>Dr</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Text16501</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 335537183" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cr</source>
+          <target>Cr</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Text16502</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 1987762555" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Page</source>
+          <target>Page</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType CurrReport_PAGENOCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 638740601" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posting Date</source>
+          <target>Posting Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Posting_DateCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 2124006630" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target>Document No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Document_No_CaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 129801547" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount</source>
+          <target>Debit Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Debit_AmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 4269759694" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount</source>
+          <target>Credit Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Credit_AmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 4199308311" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target>Account Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Account_NameCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 1653612302" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Balance</source>
+          <target>Balance</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType BalanceCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 272744317" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Type</source>
+          <target>Voucher Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Voucher_TypeCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 3156546981" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Location Code</source>
+          <target>Location Code</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Location_CodeCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 401935943" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cheque No</source>
+          <target>Cheque No</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Cheque_NoCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 939202324" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Cheque Date</source>
+          <target>Cheque Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Cheque_DateCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2598131873 - NamedType 239423154" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Closing Balance</source>
+          <target>Closing Balance</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Bank Book - NamedType Closing_BalanceCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Day Book</source>
+          <target>Day Book</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Control 612592304 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Line Narration</source>
+          <target>Line Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Control LineNarration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - Control 2391389166 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Narration</source>
+          <target>Voucher Narration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - Control VoucherNarration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - NamedType 2152900571" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Day Book</source>
+          <target>Day Book</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - NamedType DayBookCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - NamedType 3558753334" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Document No.</source>
+          <target>Document No.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - NamedType DocumentNoCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - NamedType 927834030" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Account Name</source>
+          <target>Account Name</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - NamedType AccountNameCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - NamedType 4156440530" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount</source>
+          <target>Debit Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - NamedType DebitAmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - NamedType 977154119" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount</source>
+          <target>Credit Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - NamedType CreditAmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - NamedType 2348472384" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher Type</source>
+          <target>Voucher Type</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - NamedType VoucherTypeCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - NamedType 35837468" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Date</source>
+          <target>Date</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - NamedType DateCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 2820230295 - NamedType 1583171122" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Total</source>
+          <target>Total</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Day Book - NamedType TotalCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Posted Voucher</source>
+          <target>Posted Voucher</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - Control 2346885236 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Options</source>
+          <target>Options</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - Control Options - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - Control 225329991 - Property 2879900210" size-unit="char" translate="yes" xml:space="preserve">
+          <source>PrintLineNarration</source>
+          <target>PrintLineNarration</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - Control PrintLineNarration - Property Caption</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1678411365" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ZERO</source>
+          <target>ZERO</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16526</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2316107982" size-unit="char" translate="yes" xml:space="preserve">
+          <source>HUNDRED</source>
+          <target>HUNDRED</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16527</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2953804599" size-unit="char" translate="yes" xml:space="preserve">
+          <source>AND</source>
+          <target>AND</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16528</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3591501216" size-unit="char" translate="yes" xml:space="preserve">
+          <source>%1 results in a written number that is too long.</source>
+          <target>%1 results in a written number that is too long.</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16529</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2609791378" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ONE</source>
+          <target>ONE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16532</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1972094761" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TWO</source>
+          <target>TWO</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16533</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3885184612" size-unit="char" translate="yes" xml:space="preserve">
+          <source>THREE</source>
+          <target>THREE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16534</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3247487995" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FOUR</source>
+          <target>FOUR</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16535</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 865610550" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FIVE</source>
+          <target>FIVE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16536</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 227913933" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SIX</source>
+          <target>SIX</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16537</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 527792504" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SEVEN</source>
+          <target>SEVEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16538</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 4185063183" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EIGHT</source>
+          <target>EIGHT</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16539</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 538393333" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NINE</source>
+          <target>NINE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16540</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1176089950" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TEN</source>
+          <target>TEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16541</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3557967395" size-unit="char" translate="yes" xml:space="preserve">
+          <source>ELEVEN</source>
+          <target>ELEVEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16542</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 4195664012" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TWELVE</source>
+          <target>TWELVE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16543</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2282574161" size-unit="char" translate="yes" xml:space="preserve">
+          <source>THIRTEEN</source>
+          <target>THIRTEEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16544</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2920270778" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FOURTEEN</source>
+          <target>FOURTEEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16545</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1007180927" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FIFTEEN</source>
+          <target>FIFTEEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16546</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1644877544" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SIXTEEN</source>
+          <target>SIXTEEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16547</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1344998973" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SEVENTEEN</source>
+          <target>SEVENTEEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16548</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1982695590" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EIGHTEEN</source>
+          <target>EIGHTEEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16549</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 4041348166" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NINETEEN</source>
+          <target>NINETEEN</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16550</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3403651549" size-unit="char" translate="yes" xml:space="preserve">
+          <source>TWENTY</source>
+          <target>TWENTY</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16551</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2765954932" size-unit="char" translate="yes" xml:space="preserve">
+          <source>THIRTY</source>
+          <target>THIRTY</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16552</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2128258315" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FORTY</source>
+          <target>FORTY</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16553</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1490561698" size-unit="char" translate="yes" xml:space="preserve">
+          <source>FIFTY</source>
+          <target>FIFTY</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16554</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 852865081" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SIXTY</source>
+          <target>SIXTY</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16555</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 215168464" size-unit="char" translate="yes" xml:space="preserve">
+          <source>SEVENTY</source>
+          <target>SEVENTY</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16556</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3872439143" size-unit="char" translate="yes" xml:space="preserve">
+          <source>EIGHTY</source>
+          <target>EIGHTY</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16557</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3234742526" size-unit="char" translate="yes" xml:space="preserve">
+          <source>NINETY</source>
+          <target>NINETY</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16558</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2597045909" size-unit="char" translate="yes" xml:space="preserve">
+          <source>THOUSAND</source>
+          <target>THOUSAND</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16559</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1074661875" size-unit="char" translate="yes" xml:space="preserve">
+          <source>MILLION</source>
+          <target>MILLION</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16560</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1712358492" size-unit="char" translate="yes" xml:space="preserve">
+          <source>BILLION</source>
+          <target>BILLION</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16561</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2350055109" size-unit="char" translate="yes" xml:space="preserve">
+          <source>HUNDRED</source>
+          <target>LAKH</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16562</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2987751726" size-unit="char" translate="yes" xml:space="preserve">
+          <source>CRORE</source>
+          <target>CRORE</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType Text16563</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2246344079" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Voucher No. :</source>
+          <target>Voucher No. :</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType VoucherNoCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 977154119" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Credit Amount</source>
+          <target>Credit Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType CreditAmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 4156440530" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Debit Amount</source>
+          <target>Debit Amount</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType DebitAmountCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1738592244" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Particulars</source>
+          <target>Particulars</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType ParticularsCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3943545198" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Amount (in words):</source>
+          <target>Amount (in words):</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType AmountInWordsCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2779079582" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Prepared by:</source>
+          <target>Prepared by:</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType PreparedByCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2778933052" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Checked by:</source>
+          <target>Checked by:</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType CheckedByCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 2447335280" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Approved by:</source>
+          <target>Approved by:</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType ApprovedByCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 3101759369" size-unit="char" translate="yes" xml:space="preserve">
+          <source>IntegerOccurces</source>
+          <target>IntegerOccurces</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType IntegerOccurcesCaptionLbl</note>
+        </trans-unit>
+        <trans-unit id="Report 1763630907 - NamedType 1747416626" size-unit="char" translate="yes" xml:space="preserve">
+          <source>Narration :</source>
+          <target>Narration :</target>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">Report Posted Voucher - NamedType NarrationCaptionLbl</note>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
