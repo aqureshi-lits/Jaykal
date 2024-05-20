@@ -41,6 +41,19 @@ pageextension 80021 "LIT PurchaseInvoice" extends "Purchase Invoice"
                 Importance = Additional;
             }
         }
+
+        addafter("Assigned User ID")
+        {
+            field("Posting No. Series"; Rec."Posting No. Series")
+            {
+                ApplicationArea = all;
+            }
+
+            field("Posting No."; Rec."Posting No.")
+            {
+                ApplicationArea = all;
+            }
+        }
         addafter("Vendor Invoice No.")
         {
 

@@ -17,6 +17,19 @@ pageextension 80015 "LIT SalesInvoice" extends "Sales Invoice"
             }
         }
 
+        addafter("Assigned User ID")
+        {
+            field("Posting No. Series"; Rec."Posting No. Series")
+            {
+                ApplicationArea = all;
+            }
+
+            field("Posting No."; Rec."Posting No.")
+            {
+                ApplicationArea = all;
+            }
+        }
+
         addafter(General)
         {
             group("Other Invoicing Details")
@@ -35,7 +48,7 @@ pageextension 80015 "LIT SalesInvoice" extends "Sales Invoice"
             }
         }
 
-        
+
 
         addafter("Sell-to Customer Name")
         {

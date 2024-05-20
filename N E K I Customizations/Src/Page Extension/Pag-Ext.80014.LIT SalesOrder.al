@@ -17,6 +17,21 @@ pageextension 80014 "LIT SalesOrder" extends "Sales Order"
             }
 
 
+
+
+        }
+
+        addafter("Assigned User ID")
+        {
+            field("Posting No. Series"; Rec."Posting No. Series")
+            {
+                ApplicationArea = all;
+            }
+
+            field("Posting No."; Rec."Posting No.")
+            {
+                ApplicationArea = all;
+            }
         }
 
         addafter("Sell-to Customer Name")

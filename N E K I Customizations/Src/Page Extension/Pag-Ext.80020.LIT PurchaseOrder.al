@@ -20,6 +20,19 @@ pageextension 80020 "LIT PurchaseOrder" extends "Purchase Order"
             // }
 
         }
+
+        addafter("Assigned User ID")
+        {
+            field("Posting No. Series"; Rec."Posting No. Series")
+            {
+                ApplicationArea = all;
+            }
+
+            field("Posting No."; Rec."Posting No.")
+            {
+                ApplicationArea = all;
+            }
+        }
         addafter("Vendor Invoice No.")
         {
             field("Decalration No."; Rec."Decalration No.")
