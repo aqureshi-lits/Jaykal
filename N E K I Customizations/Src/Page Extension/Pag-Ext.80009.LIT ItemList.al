@@ -112,6 +112,15 @@ pageextension 80009 "LIT ItemList" extends "Item List"
 
 
 
+        addafter("No.")
+        {
+            field("LIT No."; Rec."LIT No.")
+            {
+                ApplicationArea = All;
+            }
+
+        }
+
     }
 
 
@@ -292,5 +301,22 @@ pageextension 80009 "LIT ItemList" extends "Item List"
 
         }
     }
+
+    // trigger OnAfterGetRecord()
+    // var
+    //     myInt: Integer;
+    //     Item: Record Item;
+    // begin
+    //     Item.Reset();
+    //     if Item.Get(rec."No.") then begin
+
+    //         if rec."LIT No." <> Item."No." then begin
+    //             rec."LIT No." := Item."No.";
+    //             rec.Modify();
+    //         end;
+
+    //     end;
+
+    // end;
 
 }

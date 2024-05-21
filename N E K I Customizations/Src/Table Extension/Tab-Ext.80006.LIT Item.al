@@ -200,16 +200,25 @@ tableextension 80006 "LIT Item" extends "Item"
             DataClassification = ToBeClassified;
 
         }
+        field(80008; "LIT No."; Code[20])
+        {
+            Caption = 'No.';
+            DataClassification = ToBeClassified;
+            // FieldClass = FlowField;
+            // CalcFormula = lookup(item."No." where("No." = field("No.")));
+            // Editable = false;
+        }
 
 
     }
 
     fieldgroups
     {
-        addlast(DropDown; "LIT Description 3")
+        addlast(DropDown; Inventory, "LIT Description 3")
         {
 
         }
+
     }
 
     trigger OnAfterInsert()

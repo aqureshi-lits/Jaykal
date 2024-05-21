@@ -94,6 +94,11 @@ tableextension 80004 "LIT Vendor" extends "Vendor"
         //     Description = 'MAQ IAX Added 27-07-2019.';
         //     Editable = false;
         // }
+        field(80003; "LIT No."; Code[20])
+        {
+            Caption = 'No.';
+            DataClassification = ToBeClassified;
+        }
 
     }
 

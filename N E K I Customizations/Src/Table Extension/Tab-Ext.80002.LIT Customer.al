@@ -67,6 +67,12 @@ tableextension 80002 "LIT Customer" extends "Customer"
             Description = 'iAX.frz.30 04-12-2019 As per email by Mr. Uday';
         }
 
+        field(80005; "LIT No."; Code[20])
+        {
+            Caption = 'No.';
+            DataClassification = ToBeClassified;
+        }
+
 
     }
 

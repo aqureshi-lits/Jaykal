@@ -35,6 +35,15 @@ pageextension 80079 "LIT Vendor List Ext" extends "Vendor List"
 
         // }
 
+        addafter("No.")
+        {
+            field("LIT No."; Rec."LIT No.")
+            {
+                ApplicationArea = All;
+            }
+
+        }
+
 
     }
     actions
@@ -83,4 +92,21 @@ pageextension 80079 "LIT Vendor List Ext" extends "Vendor List"
 
         }
     }
+
+    // trigger OnAfterGetRecord()
+    // var
+    //     myInt: Integer;
+    //     Vendor: Record Vendor;
+    // begin
+    //     Vendor.Reset();
+    //     if Vendor.Get(rec."No.") then begin
+
+    //         if rec."LIT No." <> Vendor."No." then begin
+    //             rec."LIT No." := Vendor."No.";
+    //             rec.Modify();
+    //         end;
+
+    //     end;
+
+    // end;
 }

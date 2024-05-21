@@ -45,6 +45,15 @@ pageextension 80078 "LIT Customer List Ext" extends "Customer List"
 
         }
 
+        addafter("No.")
+        {
+            field("LIT No."; Rec."LIT No.")
+            {
+                ApplicationArea = All;
+            }
+
+        }
+
 
     }
     actions
@@ -93,4 +102,21 @@ pageextension 80078 "LIT Customer List Ext" extends "Customer List"
 
         }
     }
+
+    // trigger OnAfterGetRecord()
+    // var
+    //     myInt: Integer;
+    //     Customer: Record Customer;
+    // begin
+    //     Customer.Reset();
+    //     if Customer.Get(rec."No.") then begin
+
+    //         if rec."LIT No." <> Customer."No." then begin
+    //             rec."LIT No." := Customer."No.";
+    //             rec.Modify();
+    //         end;
+
+    //     end;
+
+    // end;
 }
