@@ -98,6 +98,17 @@ pageextension 80078 "LIT Customer List Ext" extends "Customer List"
                     // ToolTip = 'View detailed information about usage and sales of each resource. The Resource Statistics window shows both the units of measure and the corresponding amounts.';
 
                 }
+                action("Customer Statment")
+                {
+                    ApplicationArea = All;
+                    Caption = 'Customer Statment';
+                    Image = "Report";
+                    // Promoted = true;
+                    // PromotedCategory = Process;
+                    RunObject = Report "LIT Customer Statement";
+                    // ToolTip = 'View detailed information about usage and sales of each resource. The Resource Statistics window shows both the units of measure and the corresponding amounts.';
+
+                }
             }
 
         }
