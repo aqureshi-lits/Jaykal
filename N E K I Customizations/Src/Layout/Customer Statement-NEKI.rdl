@@ -1758,7 +1758,7 @@ Cstr(Fields!CustBalanceCaption.Value)
                                                                 <Paragraph>
                                                                   <TextRuns>
                                                                     <TextRun>
-                                                                      <Value>=Fields!Description.Value</Value>
+                                                                      <Value>=Fields!ExternalDocNo.Value</Value>
                                                                       <Style>
                                                                         <FontFamily>Segoe UI</FontFamily>
                                                                         <FontSize>8pt</FontSize>
@@ -2935,7 +2935,7 @@ Cstr(Fields!CustBalanceCaption.Value)
                                                   </TablixMembers>
                                                 </TablixRowHierarchy>
                                                 <Height>1.76388cm</Height>
-                                                <Width>19.93908cm</Width>
+                                                <Width>19.93911cm</Width>
                                                 <Style>
                                                   <Border>
                                                     <Color>#dbe8f5</Color>
@@ -3246,7 +3246,7 @@ Cstr(Fields!CustBalanceCaption.Value)
                                                                 <Paragraph>
                                                                   <TextRuns>
                                                                     <TextRun>
-                                                                      <Value>=Fields!Desc_CustLedgEntry2.Value</Value>
+                                                                      <Value>=Fields!External_Document_No_.Value</Value>
                                                                       <Style>
                                                                         <FontFamily>Segoe UI</FontFamily>
                                                                         <FontSize>8pt</FontSize>
@@ -4155,7 +4155,7 @@ Cstr(Fields!CustBalanceCaption.Value)
                                                 </Filters>
                                                 <Top>1.80947cm</Top>
                                                 <Height>1.4111cm</Height>
-                                                <Width>19.91459cm</Width>
+                                                <Width>19.91457cm</Width>
                                                 <ZIndex>1</ZIndex>
                                                 <Visibility>
                                                   <Hidden>=IIF(Fields!CustNo_CustLedgEntry2.Value="",TRUE,FALSE) OR IIF(Fields!PrintEntriesDue.Value=FALSE,TRUE,FALSE)</Hidden>
@@ -6106,6 +6106,9 @@ End Function
         <Field Name="DocumentDate_DtldCustLedgEntries">
           <DataField>DocumentDate_DtldCustLedgEntries</DataField>
         </Field>
+        <Field Name="ExternalDocNo">
+          <DataField>ExternalDocNo</DataField>
+        </Field>
         <Field Name="PostDate_DtldCustLedgEntries">
           <DataField>PostDate_DtldCustLedgEntries</DataField>
         </Field>
@@ -6204,6 +6207,9 @@ End Function
         </Field>
         <Field Name="Desc_CustLedgEntry2">
           <DataField>Desc_CustLedgEntry2</DataField>
+        </Field>
+        <Field Name="External_Document_No_">
+          <DataField>External_Document_No_</DataField>
         </Field>
         <Field Name="YourReference_CustLedgEntry2">
           <DataField>YourReference_CustLedgEntry2</DataField>
