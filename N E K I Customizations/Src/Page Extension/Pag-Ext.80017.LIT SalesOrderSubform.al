@@ -18,6 +18,20 @@ pageextension 80017 "LIT SalesOrderSubform" extends "Sales Order Subform"
             // {
             //     ApplicationArea = all;
             // }
+
+            // field("Appl.-from Item Entry";Rec."Appl.-from Item Entry")
+            // {
+            //     ApplicationArea = All;
+            // }
+            // field("Appl.-to Item Entry";Rec."Appl.-to Item Entry")
+            // {
+            //     ApplicationArea = All;
+            // }
+
+
+
+
+
             field("Job No."; Rec."Job No.")
             {
                 ApplicationArea = all;
@@ -37,6 +51,23 @@ pageextension 80017 "LIT SalesOrderSubform" extends "Sales Order Subform"
         modify("Line Amount")
         {
             Editable = false;
+        }
+
+        modify("Appl.-from Item Entry")
+        {
+            visible = true;
+
+        }
+        modify("Appl.-to Item Entry")
+        {
+            visible = true;
+        }
+        addbefore("Appl.-from Item Entry")
+        {
+            field("Sales Margin"; Rec."Sales Margin")
+            {
+                ApplicationArea = All;
+            }
         }
 
     }

@@ -15,6 +15,38 @@ report 80100 "LIT Customer Statement"
             column(No_Cust; "No.")
             {
             }
+            column(BankAccount; BankAccount)
+            {
+            }
+
+            column(Bank_Name; BankRec.Name)
+            {
+            }
+            column(Bank_BranchNo; BankRec."Bank Branch No.")
+            {
+            }
+            column(Bank_AccountNo; BankRec."Bank Account No.")
+            {
+            }
+            column(Bank_IBAN; BankRec.IBAN)
+            {
+            }
+            // column(Bank_Beneficiary; BankRec.benef)
+            // {
+            // }
+
+            column(Bank_Name2; BankRec."Name 2")
+            {
+            }
+            column(Bank_SWIFTCode; BankRec."SWIFT Code")
+            {
+            }
+
+            column(Bank_Currency; BankRec."Currency Code")
+            {
+            }
+
+
             dataitem("Integer"; "Integer")
             {
                 DataItemTableView = sorting(Number) where(Number = const(1));
@@ -756,6 +788,10 @@ report 80100 "LIT Customer Statement"
                 UpdatePictures();
                 FirstRecordPrinted := false;
                 IsFirstLoop := false;
+
+
+                IF BankRec.GET(BankAccount) THEN BEGIN
+                END;
             end;
 
             trigger OnPreDataItem()
@@ -953,6 +989,17 @@ report 80100 "LIT Customer Statement"
                         }
                     }
                 }
+                group("Bank Account")
+                {
+                    field("Bank Code"; BankAccount)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Bank Code';
+                        TableRelation = "Bank Account"."No.";
+                    }
+                }
+
+
             }
         }
 
@@ -1152,6 +1199,8 @@ report 80100 "LIT Customer Statement"
         TelemetryCategoryTxt: Label 'Report', Locked = true;
         CustomerStatementReportGeneratedTxt: Label 'Customer Statement report generated.', Locked = true;
         LegalOfficeTxt, LegalOfficeLbl : Text;
+        BankRec: Record 270;
+        BankAccount: Code[20];
 
     protected var
         CompanyInfo: Record "Company Information";

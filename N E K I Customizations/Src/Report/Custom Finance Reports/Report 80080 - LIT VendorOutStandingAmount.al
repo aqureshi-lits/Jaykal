@@ -314,7 +314,22 @@ report 80080 "LIT Vendor OutStanding Amount"
                         ChkPrint.FormatNoText(AmtInWord, ROUND(TotalLineAmt) - (TotalInvDisc) + (VATAmt), "Currency Code");
                     end;
                     // OverDueDays := DataItem9."Posting Date" - AsOfDate;
-                    OverDueDays := AsOfDate - DataItem9."Posting Date";
+                    // comment 6 June 2024
+                    // OverDueDays := AsOfDate - DataItem9."Posting Date";
+
+                    // add nnew code 6 June 2024
+                    DueDays := Today - DataItem9."Due Date";
+
+                    if DueDays > 0 then begin
+                        OverDueDays := Today - DataItem9."Due Date";
+                    end
+                    else begin
+                        OverDueDays := 0;
+                    end;
+
+                    // add nnew code 6 June 2024
+
+                    // comment 6 June 2024
                     // ItemRec.Reset();
                     // ItemRec.SetRange("No.", "No.");
                     // if ItemRec.FindSet() then;
@@ -476,6 +491,7 @@ report 80080 "LIT Vendor OutStanding Amount"
 
     var
         OverDueDays: Decimal;
+        DueDays: Decimal;
         AsOfDate: Date;
         CompanyInformation: Record 79;
         ChkPrint: Report Check;

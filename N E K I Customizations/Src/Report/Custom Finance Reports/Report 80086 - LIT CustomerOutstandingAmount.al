@@ -170,6 +170,37 @@ report 80086 "LIT CustomerOutstandingAmount"
             {
             }
 
+            column(BankAccount; BankAccount)
+            {
+            }
+
+            column(Bank_Name; BankRec.Name)
+            {
+            }
+            column(Bank_BranchNo; BankRec."Bank Branch No.")
+            {
+            }
+            column(Bank_AccountNo; BankRec."Bank Account No.")
+            {
+            }
+            column(Bank_IBAN; BankRec.IBAN)
+            {
+            }
+            // column(Bank_Beneficiary; BankRec.benef)
+            // {
+            // }
+
+            column(Bank_Name2; BankRec."Name 2")
+            {
+            }
+            column(Bank_SWIFTCode; BankRec."SWIFT Code")
+            {
+            }
+
+            column(Bank_Currency; BankRec."Currency Code")
+            {
+            }
+
             dataitem(DataItem9; "Cust. Ledger Entry")
             {
 
@@ -321,7 +352,21 @@ report 80086 "LIT CustomerOutstandingAmount"
                         ChkPrint.FormatNoText(AmtInWord, ROUND(TotalLineAmt) - (TotalInvDisc) + (VATAmt), "Currency Code");
                     end;
                     // OverDueDays := DataItem9."Posting Date" - AsOfDate;
-                    OverDueDays := AsOfDate - DataItem9."Posting Date";
+                    // comment 6 June 2024
+                    //OverDueDays := AsOfDate - DataItem9."Posting Date";
+                    // comment 6 June 2024
+
+                    // add nnew code 6 June 2024
+                    DueDays := Today - DataItem9."Due Date";
+
+                    if DueDays > 0 then begin
+                        OverDueDays := Today - DataItem9."Due Date";
+                    end
+                    else begin
+                        OverDueDays := 0;
+                    end;
+
+                    // add nnew code 6 June 2024
                     // ItemRec.Reset();
                     // ItemRec.SetRange("No.", "No.");
                     // if ItemRec.FindSet() then;
@@ -372,6 +417,11 @@ report 80086 "LIT CustomerOutstandingAmount"
                     CurrText := 'AED'
                 ELSE
                     CurrText := "Currency Code";
+
+
+                IF BankRec.GET(BankAccount) THEN BEGIN
+                END;
+
 
                 // IF VendRec.GET("Buy-from Vendor No.") THEN begin
                 //     if Dataitem1."Ship-to Name" = '' then begin
@@ -466,7 +516,7 @@ report 80086 "LIT CustomerOutstandingAmount"
 
     requestpage
     {
-
+        SaveValues = true;
         layout
         {
             area(content)
@@ -486,6 +536,16 @@ report 80086 "LIT CustomerOutstandingAmount"
                         end;
                     }
                 }
+                group("Bank Account")
+                {
+                    field("Bank Code"; BankAccount)
+                    {
+                        ApplicationArea = All;
+                        Caption = 'Bank Code';
+                        TableRelation = "Bank Account"."No.";
+                    }
+                }
+
             }
         }
 
@@ -508,7 +568,10 @@ report 80086 "LIT CustomerOutstandingAmount"
         GLEntry: Record "G/L Entry";
         Shiptoname: Text;
         OverDueDays: Decimal;
+        DueDays: Decimal;
         AsOfDate: Date;
+        BankRec: Record 270;
+        BankAccount: Code[20];
         CompanyInformation: Record 79;
         ChkPrint: Report Check;
         AmtInWord: array[2] of Text[80];
