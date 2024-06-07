@@ -16,7 +16,7 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
                 myInt: Integer;
             begin
                 rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
-                rec.Modify(true);
+                //  rec.Modify(true);
             end;
         }
         modify("Unit Cost")
@@ -26,7 +26,7 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
                 myInt: Integer;
             begin
                 rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
-                rec.Modify(true);
+                // rec.Modify(true);
             end;
         }
         modify("Unit Cost (LCY)")
@@ -36,7 +36,7 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
                 myInt: Integer;
             begin
                 rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
-                rec.Modify(true);
+                //rec.Modify(true);
             end;
         }
 
@@ -47,7 +47,7 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
                 myInt: Integer;
             begin
                 rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
-                rec.Modify(true);
+                // rec.Modify(true);
             end;
         }
 
@@ -62,5 +62,13 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
     //             if SalesHeader."Job No." <> '' then
     //                 if Job.Get(SalesHeader."Job No.") then
     //                     Error('Sales Quote cannot be modified as a Job against this dcoument is already created. Either delete the Job or create a new Sales Quote as a copy of this Sales Quote.');
+    // end;
+
+    // trigger OnAfterModify()
+    // var
+    //     myInt: Integer;
+    // begin
+    //     rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
+    //           //  rec.Modify(true);
     // end;
 }
