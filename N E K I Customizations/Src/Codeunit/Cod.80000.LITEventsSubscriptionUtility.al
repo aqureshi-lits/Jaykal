@@ -309,4 +309,46 @@ codeunit 80000 "LITEvents Subscription Utility"
     begin
         PurchaseHeader."Decalration Date" := workdate();
     end;
+
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post (Yes/No)", 'OnBeforeConfirmPost', '', false, false)]
+    local procedure OnBeforeConfirmPost(var SalesHeader: Record "Sales Header")
+    var
+        SalesInvHead: Record "Sales Invoice Header";
+        SalesInvHead1: Record "Sales Invoice Header";
+        SalesHead: Record "Sales Header";
+    begin
+        //MAQ IAX Added 26-10-2020.
+        SalesInvHead.RESET;
+        SalesInvHead.SETRANGE("External Document No.", SalesHeader."External Document No.");
+        SalesInvHead.SETRANGE("Sell-to Customer No.", SalesHeader."Sell-to Customer No.");
+        //SalesInvHead.SETRANGE();
+        IF SalesInvHead.Find('-') THEN begin
+            // IF NOT CONFIRM('%1 LPO No. already posted, Do want to continue?', FALSE, SalesInvHead."External Document No.") THEN
+            //     ERROR('')
+            // ELSE
+            //     EXIT;
+
+            // SalesInvHead1.Reset();
+            // SalesInvHead1.SetRange("Sell-to Customer No.", SalesHeader."Sell-to Customer No.");
+            // if SalesInvHead1.Find('-') then begin
+            Error('%1 LPO No. with Customer No. %2 already posted', SalesInvHead."External Document No.", SalesInvHead."Sell-to Customer No.");
+            EXIT;
+            // end;
+        end;
+
+        // SalesHead.RESET;
+        // SalesHead.SETRANGE("External Document No.", SalesHeader."External Document No.");
+        // //SalesHead.SETRANGE("Sell-to Customer No." , "Sell-to Customer No.");
+        // //SalesHead.SETRANGE();
+        // IF SalesHead.Find('-') THEN begin
+        //     IF NOT CONFIRM('%1 LPO No. already exist, Do you want to continue?', FALSE, SalesHead."External Document No.") THEN
+        //         ERROR('')
+        //     ELSE
+        //         EXIT;
+        // end;
+
+    end;
+
+
 }

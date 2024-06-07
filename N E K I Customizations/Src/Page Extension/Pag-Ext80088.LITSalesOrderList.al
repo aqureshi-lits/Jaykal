@@ -14,7 +14,7 @@ pageextension 80088 SalesOrderListExt extends "Sales Order List"
             action("Sales Order - Sales")
             {
                 ApplicationArea = Basic, Suite;
-                Caption = 'Sales Order - Sales Report';
+                Caption = 'Sales Order - Summary Report';
                 Image = Print;
 
                 trigger OnAction()

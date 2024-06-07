@@ -9,6 +9,48 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
             Editable = false;
         }
 
+        modify("Unit Price")
+        {
+            trigger OnAfterValidate()
+            var
+                myInt: Integer;
+            begin
+                rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
+                rec.Modify(true);
+            end;
+        }
+        modify("Unit Cost")
+        {
+            trigger OnAfterValidate()
+            var
+                myInt: Integer;
+            begin
+                rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
+                rec.Modify(true);
+            end;
+        }
+        modify("Unit Cost (LCY)")
+        {
+            trigger OnAfterValidate()
+            var
+                myInt: Integer;
+            begin
+                rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
+                rec.Modify(true);
+            end;
+        }
+
+        modify(Quantity)
+        {
+            trigger OnAfterValidate()
+            var
+                myInt: Integer;
+            begin
+                rec."Sales Margin" := Rec."Unit Price" - rec."Unit Cost (LCY)";
+                rec.Modify(true);
+            end;
+        }
+
     }
     // trigger OnBeforeModify()
     // var

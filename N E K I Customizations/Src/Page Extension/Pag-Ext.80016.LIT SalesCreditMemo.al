@@ -22,7 +22,27 @@ pageextension 80016 "LIT SalesCreditMemo" extends "Sales Credit Memo"
             }
 
 
+
+
         }
+
+        addafter("Posting Date")
+        {
+            field("Posting No."; Rec."Posting No.")
+            {
+                ApplicationArea = All;
+            }
+
+            field("Posting No. Series"; Rec."Posting No. Series")
+            {
+                ApplicationArea = All;
+            }
+
+        }
+
+
+
+
 
 
 

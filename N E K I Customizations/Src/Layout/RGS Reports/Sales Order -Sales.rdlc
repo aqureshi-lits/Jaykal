@@ -34,7 +34,7 @@
                   <Width>0.87518in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1in</Width>
+                  <Width>1.04496in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -50,7 +50,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Ordered Qty.</Value>
+                                  <Value>Ordered Qty.</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -103,7 +103,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Ordered Value Inc.VAT</Value>
+                                  <Value>Ordered Value Inc.VAT</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -156,7 +156,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Qty. Shipped</Value>
+                                  <Value>Qty. Shipped</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -209,7 +209,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Shipped Value</Value>
+                                  <Value>Shipped Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -262,7 +262,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Remaining Qty.</Value>
+                                  <Value>Remaining Qty.</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -315,7 +315,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">Remaining Value</Value>
+                                  <Value>Remaining Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>9pt</FontSize>
@@ -373,7 +373,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!Line_Quantity.Value</Value>
+                                  <Value>=Fields!Line_Quantity.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -426,7 +426,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!AmountIncVat.Value</Value>
+                                  <Value>=Fields!AmountIncVat.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -459,7 +459,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!QuantityReceived_PurchaseLine.Value</Value>
+                                  <Value>=Fields!QuantityReceived_PurchaseLine.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -512,7 +512,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -564,7 +564,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Fields!OutstandingQuantity_PurchaseLine.Value</Value>
+                                  <Value>=Fields!OutstandingQuantity_PurchaseLine.Value</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -617,7 +617,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto" />
+                                  <Value />
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -674,7 +674,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!Line_Quantity.Value)</Value>
+                                  <Value>=Sum(Fields!Line_Quantity.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -728,7 +728,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!AmountIncVat.Value)</Value>
+                                  <Value>=Sum(Fields!AmountIncVat.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -761,7 +761,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!QuantityReceived_PurchaseLine.Value)</Value>
+                                  <Value>=Sum(Fields!QuantityReceived_PurchaseLine.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -815,7 +815,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!ShippedAmmount.Value)</Value>
+                                  <Value>=Sum(Fields!ShippedAmmount.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -868,7 +868,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!OutstandingQuantity_PurchaseLine.Value)</Value>
+                                  <Value>=Sum(Fields!OutstandingQuantity_PurchaseLine.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -922,7 +922,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!OutStandingAmount.Value)</Value>
+                                  <Value>=Sum(Fields!OutStandingAmount.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -980,7 +980,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!Line_Quantity.Value)</Value>
+                                  <Value>=Sum(Fields!Line_Quantity.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1034,7 +1034,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!AmountIncVat.Value)</Value>
+                                  <Value>=Sum(Fields!AmountIncVat.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1087,7 +1087,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!QuantityReceived_PurchaseLine.Value)</Value>
+                                  <Value>=Sum(Fields!QuantityReceived_PurchaseLine.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1141,7 +1141,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!ShippedAmmount.Value)</Value>
+                                  <Value>=Sum(Fields!ShippedAmmount.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1194,7 +1194,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!OutstandingQuantity_PurchaseLine.Value)</Value>
+                                  <Value>=Sum(Fields!OutstandingQuantity_PurchaseLine.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1248,7 +1248,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!OutStandingAmount.Value)</Value>
+                                  <Value>=Sum(Fields!OutStandingAmount.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1306,7 +1306,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!Line_Quantity.Value)</Value>
+                                  <Value>=Sum(Fields!Line_Quantity.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1360,7 +1360,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!AmountIncVat.Value)</Value>
+                                  <Value>=Sum(Fields!AmountIncVat.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1413,7 +1413,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!QuantityReceived_PurchaseLine.Value)</Value>
+                                  <Value>=Sum(Fields!QuantityReceived_PurchaseLine.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1467,7 +1467,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!ShippedAmmount.Value)</Value>
+                                  <Value>=Sum(Fields!ShippedAmmount.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1520,7 +1520,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!OutstandingQuantity_PurchaseLine.Value)</Value>
+                                  <Value>=Sum(Fields!OutstandingQuantity_PurchaseLine.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1574,7 +1574,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value EvaluationMode="Auto">=Sum(Fields!OutStandingAmount.Value)</Value>
+                                  <Value>=Sum(Fields!OutStandingAmount.Value)</Value>
                                   <Style>
                                     <FontFamily>Calibri</FontFamily>
                                     <FontSize>8pt</FontSize>
@@ -1645,7 +1645,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value EvaluationMode="Auto">Order Date</Value>
+                                <Value>Order Date</Value>
                                 <Style>
                                   <FontFamily>Calibri</FontFamily>
                                   <FontSize>9pt</FontSize>
@@ -1703,7 +1703,7 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value EvaluationMode="Auto">Customer Name</Value>
+                                    <Value>Customer Name</Value>
                                     <Style>
                                       <FontFamily>Calibri</FontFamily>
                                       <FontSize>9pt</FontSize>
@@ -1761,7 +1761,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value EvaluationMode="Auto">Sales Person</Value>
+                                        <Value>Sales Person</Value>
                                         <Style>
                                           <FontFamily>Calibri</FontFamily>
                                           <FontSize>9pt</FontSize>
@@ -1819,7 +1819,7 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value EvaluationMode="Auto">Order No</Value>
+                                            <Value>Order No</Value>
                                             <Style>
                                               <FontFamily>Calibri</FontFamily>
                                               <FontSize>9pt</FontSize>
@@ -1903,7 +1903,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value EvaluationMode="Auto">=Fields!OrderDate.Value</Value>
+                                <Value>=Fields!OrderDate.Value</Value>
                                 <Style>
                                   <FontFamily>Calibri</FontFamily>
                                   <FontSize>9pt</FontSize>
@@ -1949,7 +1949,7 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value EvaluationMode="Auto">=Fields!VEndor_no.Value</Value>
+                                    <Value>=Fields!VEndor_no.Value</Value>
                                     <Style>
                                       <FontFamily>Calibri</FontFamily>
                                       <FontSize>9pt</FontSize>
@@ -1961,7 +1961,7 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value EvaluationMode="Auto">=Fields!VendName.Value</Value>
+                                    <Value>=Fields!VendName.Value</Value>
                                     <Style>
                                       <FontFamily>Calibri</FontFamily>
                                       <FontSize>9pt</FontSize>
@@ -2026,7 +2026,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value EvaluationMode="Auto">=Fields!SalesPerson.Value</Value>
+                                        <Value>=Fields!SalesPerson.Value</Value>
                                         <Style>
                                           <FontFamily>Calibri</FontFamily>
                                           <FontSize>9pt</FontSize>
@@ -2081,7 +2081,7 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value EvaluationMode="Auto">=Fields!Order_No.Value</Value>
+                                            <Value>=Fields!Order_No.Value</Value>
                                             <Style>
                                               <FontFamily>Calibri</FontFamily>
                                               <FontSize>9pt</FontSize>
@@ -2133,7 +2133,7 @@
                                 </TablixMember>
                                 <TablixMember>
                                   <Visibility>
-                                    <Hidden>=iif(Fields!AmountIncVat.Value=0,true,false)</Hidden>
+                                    <Hidden>=iif((Fields!AmountIncVat.Value=0)or(Sum(Fields!OutstandingQuantity_PurchaseLine.Value)=0),true,false)</Hidden>
                                   </Visibility>
                                   <KeepWithGroup>Before</KeepWithGroup>
                                 </TablixMember>
@@ -2152,7 +2152,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value EvaluationMode="Auto" />
+                                        <Value />
                                         <Style>
                                           <FontWeight>Bold</FontWeight>
                                         </Style>
@@ -2206,7 +2206,7 @@
                                       <Paragraph>
                                         <TextRuns>
                                           <TextRun>
-                                            <Value EvaluationMode="Auto" />
+                                            <Value />
                                             <Style>
                                               <FontWeight>Bold</FontWeight>
                                             </Style>
@@ -2256,6 +2256,9 @@
                               </Visibility>
                             </TablixMember>
                           </TablixMembers>
+                          <Visibility>
+                            <Hidden>=iif(Sum(Fields!OutstandingQuantity_PurchaseLine.Value)=0,true,false)</Hidden>
+                          </Visibility>
                           <KeepWithGroup>Before</KeepWithGroup>
                         </TablixMember>
                       </TablixMembers>
@@ -2271,7 +2274,7 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value EvaluationMode="Auto">Total : </Value>
+                                    <Value>Total : </Value>
                                     <Style>
                                       <FontFamily>Calibri</FontFamily>
                                       <FontSize>9pt</FontSize>
@@ -2330,10 +2333,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DataSet_Result</DataSetName>
-            <Top>0.19696in</Top>
-            <Left>0.125in</Left>
             <Height>1.25in</Height>
-            <Width>9.70147in</Width>
+            <Width>9.74643in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2341,10 +2342,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Height>1.4678in</Height>
+        <Height>1.25in</Height>
         <Style />
       </Body>
-      <Width>9.82647in</Width>
+      <Width>9.74643in</Width>
       <Page>
         <PageHeader>
           <Height>1.69762in</Height>
@@ -2358,7 +2359,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!CompName.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!CompName.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>16pt</FontSize>
@@ -2373,9 +2374,8 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.11821in</Top>
-              <Left>0.03125in</Left>
               <Height>0.28596in</Height>
-              <Width>9.79522in</Width>
+              <Width>9.74643in</Width>
               <Style>
                 <Border>
                   <Style>None</Style>
@@ -2393,7 +2393,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto"> Page No.: </Value>
+                      <Value> Page No.: </Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -2426,7 +2426,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Globals!PageNumber</Value>
+                      <Value>=Globals!PageNumber</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -2461,7 +2461,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">SALES ORDER SUMMARY</Value>
+                      <Value>SALES ORDER SUMMARY</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>14pt</FontSize>
@@ -2477,9 +2477,8 @@
               </Paragraphs>
               <rd:DefaultName>Textbox24</rd:DefaultName>
               <Top>0.40417in</Top>
-              <Left>0.03125in</Left>
               <Height>0.26898in</Height>
-              <Width>9.79522in</Width>
+              <Width>9.74643in</Width>
               <ZIndex>3</ZIndex>
               <Style>
                 <Border>
@@ -2498,7 +2497,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Run Date : </Value>
+                      <Value>Run Date : </Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -2534,7 +2533,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">Run  Time : </Value>
+                      <Value>Run  Time : </Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -2570,7 +2569,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!SysDate.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!SysDate.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -2606,7 +2605,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=Globals!ExecutionTime</Value>
+                      <Value>=Globals!ExecutionTime</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                         <FontSize>8pt</FontSize>
@@ -2623,7 +2622,7 @@
               <Top>1.18704in</Top>
               <Left>8.82282in</Left>
               <Height>0.18055in</Height>
-              <Width>0.9375in</Width>
+              <Width>0.92361in</Width>
               <ZIndex>7</ZIndex>
               <Style>
                 <Border>
@@ -2642,7 +2641,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value EvaluationMode="Auto">=First(Fields!AllFilters.Value, "DataSet_Result")</Value>
+                      <Value>=First(Fields!AllFilters.Value, "DataSet_Result")</Value>
                       <Style>
                         <FontFamily>Calibri</FontFamily>
                       </Style>
@@ -2653,9 +2652,8 @@
               </Paragraphs>
               <rd:DefaultName>Textbox10</rd:DefaultName>
               <Top>0.93625in</Top>
-              <Left>0.07167in</Left>
               <Height>0.25in</Height>
-              <Width>6.53125in</Width>
+              <Width>6.60292in</Width>
               <ZIndex>8</ZIndex>
               <Style>
                 <Border>
@@ -2679,6 +2677,7 @@
         <LeftMargin>0.5in</LeftMargin>
         <RightMargin>0.2in</RightMargin>
         <TopMargin>0.25in</TopMargin>
+        <BottomMargin>0.5in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
