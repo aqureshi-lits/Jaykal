@@ -8,5 +8,11 @@ tableextension 80036 SalesInvLine extends "Sales Invoice Line"
             Editable = false;
             FieldClass = FlowField;
         }
+        field(80002; "Sales Margin"; Decimal)
+        {
+            DataClassification = ToBeClassified;
+            Description = 'MAQ IAX Added 06-12-2020';
+            Editable = false;
+        }
     }
 }
