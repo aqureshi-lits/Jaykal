@@ -32,6 +32,27 @@ tableextension 80008 "LIT SalesHeader" extends "Sales Header"
             OptionCaption = ' ,Sales Local,Sales Export,Sales FOC';
             OptionMembers = " ","Sales Local","Sales Export","Sales FOC";
         }
+
+        modify("External Document No.")
+        {
+            trigger OnBeforeValidate()
+            var
+                myInt: Integer;
+                TblSalesHeader: Record "Sales Header";
+            begin
+                TblSalesHeader.Reset();
+                TblSalesHeader.SetRange(TblSalesHeader."Document Type", TblSalesHeader."Document Type"::Order);
+                TblSalesHeader.SetRange(TblSalesHeader."External Document No.", Rec."External Document No.");
+                if TblSalesHeader.FindSet() then begin
+                    IF NOT CONFIRM('%1 LPO No. is already exist!, Do want to continue?', FALSE, TblSalesHeader."External Document No.") THEN
+                        ERROR('')
+                    ELSE
+                        EXIT;
+                end;
+
+            end;
+        }
     }
+
 
 }

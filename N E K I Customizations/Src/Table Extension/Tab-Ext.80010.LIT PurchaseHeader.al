@@ -45,6 +45,26 @@ tableextension 80010 "LIT PurchaseHeader" extends "Purchase Header"
             OptionCaption = ' ,Purchase Local,Purchase Import';
             OptionMembers = " ","Purchase Local","Purchase Import";
         }
+
+        modify("Vendor Invoice No.")
+        {
+            trigger OnBeforeValidate()
+            var
+                myInt: Integer;
+                TblPurchHeader: Record "Purchase Header";
+            begin
+                TblPurchHeader.Reset();
+                TblPurchHeader.SetRange(TblPurchHeader."Document Type", TblPurchHeader."Document Type"::Order);
+                TblPurchHeader.SetRange(TblPurchHeader."Vendor Invoice No.", Rec."Vendor Invoice No.");
+                if TblPurchHeader.FindSet() then begin
+                    IF NOT CONFIRM('%1 Vendor Invoice No. is already exist!, Do want to continue?', FALSE, TblPurchHeader."Vendor Invoice No.") THEN
+                        ERROR('')
+                    ELSE
+                        EXIT;
+                end;
+
+            end;
+        }
     }
 
 }
