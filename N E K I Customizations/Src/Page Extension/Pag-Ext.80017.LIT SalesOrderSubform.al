@@ -70,6 +70,15 @@ pageextension 80017 "LIT SalesOrderSubform" extends "Sales Order Subform"
             }
         }
 
+        addafter(Quantity)
+        {
+            field("Outstanding Quantity"; Rec."Outstanding Quantity")
+            {
+                ApplicationArea = All;
+            }
+
+        }
+
     }
 
     actions

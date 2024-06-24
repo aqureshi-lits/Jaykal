@@ -27,6 +27,10 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
             // {
             //     ApplicationArea = All;
             // }
+            // field("Outstanding Quantity"; Rec."Outstanding Quantity")
+            // {
+            //     ApplicationArea = All;
+            // }
 
 
             field("Qty. to Invoice"; Rec."Qty. to Invoice")
@@ -62,5 +66,7 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
         {
             Visible = true;
         }
+
+        moveafter("Outstanding Quantity"; Quantity)
     }
 }

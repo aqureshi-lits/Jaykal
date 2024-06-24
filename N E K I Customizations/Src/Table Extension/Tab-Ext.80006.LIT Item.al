@@ -219,6 +219,8 @@ tableextension 80006 "LIT Item" extends "Item"
 
         }
 
+
+
     }
 
     trigger OnAfterInsert()
