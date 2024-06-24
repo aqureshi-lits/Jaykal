@@ -46,6 +46,10 @@ pageextension 80009 "LIT ItemList" extends "Item List"
                 ApplicationArea = All;
                 ToolTip = 'Specifies the Packing.';
             }
+            field("Qty to Order"; Rec."Qty to Order")
+            {
+                ApplicationArea = All;
+            }
         }
 
         addafter("Item Category Code")
@@ -319,4 +323,20 @@ pageextension 80009 "LIT ItemList" extends "Item List"
 
     // end;
 
+    trigger OnAfterGetRecord()
+    var
+        myInt: Integer;
+    begin
+        QtytoOrder := Rec."Qty. on Sales Order" - (Rec.Inventory + Rec."Qty. on Purch. Order");
+        if QtytoOrder < 0 then begin
+            Rec."Qty to Order" := 0.00;
+        end
+        else begin
+            Rec."Qty to Order" := QtytoOrder;
+        end;
+    end;
+
+    var
+        // "Qty to Order": Decimal;
+        QtytoOrder: Decimal;
 }

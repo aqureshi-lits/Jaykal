@@ -208,7 +208,12 @@ tableextension 80006 "LIT Item" extends "Item"
             // CalcFormula = lookup(item."No." where("No." = field("No.")));
             // Editable = false;
         }
+        field(80009; "Qty to Order"; Decimal)
+        {
+            Caption = 'Qty to Order';
+            // DataClassification = ToBeClassified;
 
+        }
 
     }
 

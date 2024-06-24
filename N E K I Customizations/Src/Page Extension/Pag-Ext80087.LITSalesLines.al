@@ -2,7 +2,14 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
 {
     layout
     {
-
+        addafter("Sell-to Customer No.")
+        {
+            field(CustomerName; CustomerName)
+            {
+                ApplicationArea = All;
+                Caption = 'Sell-to Customer Name';
+            }
+        }
         addbefore(Quantity)
         {
             field("Appl.-from Item Entry"; Rec."Appl.-from Item Entry")
@@ -14,7 +21,10 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
                 ApplicationArea = All;
             }
 
-
+            // field("Outstanding Quantity"; Rec."Outstanding Quantity")
+            // {
+            //     ApplicationArea = All;
+            // }
 
             field("Sales Margin"; Rec."Sales Margin")
             {
@@ -46,8 +56,6 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
                 ApplicationArea = All;
             }
 
-
-
         }
         addafter("Qty. to Ship")
         {
@@ -69,4 +77,19 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
 
         moveafter("Outstanding Quantity"; Quantity)
     }
+
+    trigger OnAfterGetRecord()
+    var
+        myInt: Integer;
+    begin
+        Customer.Reset();
+        Customer.SetRange("No.", Rec."Sell-to Customer No.");
+        if Customer.FindSet() then begin
+            CustomerName := Customer.Name;
+        end;
+    end;
+
+    var
+        Customer: Record Customer;
+        CustomerName: Text[100];
 }
