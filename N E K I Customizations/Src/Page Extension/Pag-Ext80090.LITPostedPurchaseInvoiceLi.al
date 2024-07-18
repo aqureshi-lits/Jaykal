@@ -8,6 +8,10 @@ pageextension 80090 "LIT Posted Purchase Invoice Li" extends "Posted Purchase In
             {
                 ApplicationArea = All;
             }
+            field("Posting Date"; Rec."Posting Date")
+            {
+                ApplicationArea = All;
+            }
 
         }
     }
