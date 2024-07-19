@@ -67,9 +67,10 @@ pageextension 80089 "LIT Posted Sales Invoice Lines" extends "Posted Sales Invoi
                 ApplicationArea = All;
                 Caption = 'External Document No.';
             }
-            field("Sales Margin"; Rec."Sales Margin")
+            field("Sales Margin"; (Rec."Unit Price" - Rec."Unit Cost (LCY)"))
             {
                 ApplicationArea = All;
+                Caption = 'Sales Margin';
             }
         }
     }
