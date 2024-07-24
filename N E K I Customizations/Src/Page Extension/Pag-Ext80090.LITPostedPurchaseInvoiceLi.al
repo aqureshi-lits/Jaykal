@@ -12,6 +12,10 @@ pageextension 80090 "LIT Posted Purchase Invoice Li" extends "Posted Purchase In
             {
                 ApplicationArea = All;
             }
+            field("Item Category Code"; Rec."Item Category Code")
+            {
+                ApplicationArea = All;
+            }
 
         }
     }
