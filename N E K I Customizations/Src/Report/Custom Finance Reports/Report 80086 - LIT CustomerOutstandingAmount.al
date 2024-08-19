@@ -260,6 +260,10 @@ report 80086 "LIT CustomerOutstandingAmount"
                 {
                 }
                 column(Shiptoname; Shiptoname) { }
+                column(Posting_Date; "Posting Date")
+                { }
+                column(OpenBalanceDate; OpenBalanceDate)
+                { }
                 // column(PartNo_PurchaseLine; "No.")
                 // {
                 // }
@@ -400,6 +404,7 @@ report 80086 "LIT CustomerOutstandingAmount"
                 begin
                     srno := 0;
                     SetFilter("Posting Date", '<=%1', AsOfDate);
+                    OpenBalanceDate := 20240331D;
                 end;
             }
 
@@ -577,6 +582,7 @@ report 80086 "LIT CustomerOutstandingAmount"
         AmtInWord: array[2] of Text[80];
         PricesIncludingVAT: Boolean;
         srno: Integer;
+        OpenBalanceDate: Date;
         Gdoc: Code[20];
         VATAmt: Decimal;
         totvatamnt: Decimal;

@@ -4261,7 +4261,6 @@ Cstr(Fields!CustBalanceCaption.Value)
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Top>0cm</Top>
                 <Height>0.6441cm</Height>
                 <Width>2.76376cm</Width>
                 <Style>
@@ -4585,7 +4584,6 @@ Cstr(Fields!CustBalanceCaption.Value)
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>6.08432cm</Top>
-            <Left>0cm</Left>
             <Height>2.76187cm</Height>
             <Width>19.70299cm</Width>
             <ZIndex>1</ZIndex>

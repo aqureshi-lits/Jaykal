@@ -91,13 +91,13 @@ Cstr(Fields!Address.Value) + Chr(177)
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.86595cm</Width>
+                  <Width>3.02072cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.33161cm</Width>
+                  <Width>0.48638cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>25.11108cm</Width>
+                  <Width>25.26585cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -443,7 +443,6 @@ Cstr(Fields!Address.Value) + Chr(177)
                           </Style>
                         </Textbox>
                         <ColSpan>3</ColSpan>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell />
@@ -459,40 +458,37 @@ Cstr(Fields!Address.Value) + Chr(177)
                           <TablixBody>
                             <TablixColumns>
                               <TablixColumn>
-                                <Width>1.54028cm</Width>
+                                <Width>1.81296cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.48184cm</Width>
+                                <Width>1.75452cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>2.56441cm</Width>
+                                <Width>2.83709cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>3.08587cm</Width>
+                                <Width>3.35855cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>6.12026cm</Width>
+                                <Width>6.39294cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.60594cm</Width>
+                                <Width>1.87862cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.91646cm</Width>
+                                <Width>2.18914cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>2.27896cm</Width>
+                                <Width>2.55164cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>2.53512cm</Width>
+                                <Width>2.29274cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>2.02006cm</Width>
+                                <Width>1.87646cm</Width>
                               </TablixColumn>
                               <TablixColumn>
-                                <Width>1.60378cm</Width>
-                              </TablixColumn>
-                              <TablixColumn>
-                                <Width>1.55565cm</Width>
+                                <Width>1.82833cm</Width>
                               </TablixColumn>
                             </TablixColumns>
                             <TablixRows>
@@ -783,7 +779,7 @@ Cstr(Fields!Address.Value) + Chr(177)
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>Currency </Value>
+                                                <Value>PDC</Value>
                                                 <Style>
                                                   <FontFamily>Calibri</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -907,61 +903,6 @@ Cstr(Fields!Address.Value) + Chr(177)
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox20</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>Solid</Style>
-                                          </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox32">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>Balance Amount (AED)</Value>
-                                                <Style>
-                                                  <FontFamily>Calibri</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                  <FontWeight>Bold</FontWeight>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox32</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -1173,7 +1114,7 @@ Cstr(Fields!Address.Value) + Chr(177)
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!VendorPostingDate.Value</Value>
+                                                <Value>=iif(Fields!Posting_Date.Value &lt;= Fields!OpenBalanceDate.Value, Fields!VendorPostingDate.Value, Fields!Posting_Date.Value)</Value>
                                                 <Style>
                                                   <FontFamily>Calibri</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1191,26 +1132,6 @@ Cstr(Fields!Address.Value) + Chr(177)
                                           <Border>
                                             <Style>Solid</Style>
                                           </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
                                           <PaddingLeft>2pt</PaddingLeft>
                                           <PaddingRight>2pt</PaddingRight>
                                           <PaddingTop>2pt</PaddingTop>
@@ -1444,7 +1365,7 @@ Cstr(Fields!Address.Value) + Chr(177)
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=Fields!Currency_Code.Value</Value>
+                                                <Value />
                                                 <Style>
                                                   <FontFamily>Calibri</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1566,61 +1487,6 @@ Cstr(Fields!Address.Value) + Chr(177)
                                           </Paragraph>
                                         </Paragraphs>
                                         <rd:DefaultName>Textbox21</rd:DefaultName>
-                                        <Style>
-                                          <Border>
-                                            <Style>Solid</Style>
-                                          </Border>
-                                          <TopBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </TopBorder>
-                                          <BottomBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </BottomBorder>
-                                          <LeftBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </LeftBorder>
-                                          <RightBorder>
-                                            <Color>Black</Color>
-                                            <Style>Solid</Style>
-                                            <Width>1pt</Width>
-                                          </RightBorder>
-                                          <PaddingLeft>2pt</PaddingLeft>
-                                          <PaddingRight>2pt</PaddingRight>
-                                          <PaddingTop>2pt</PaddingTop>
-                                          <PaddingBottom>2pt</PaddingBottom>
-                                        </Style>
-                                      </Textbox>
-                                    </CellContents>
-                                  </TablixCell>
-                                  <TablixCell>
-                                    <CellContents>
-                                      <Textbox Name="Textbox36">
-                                        <CanGrow>true</CanGrow>
-                                        <KeepTogether>true</KeepTogether>
-                                        <Paragraphs>
-                                          <Paragraph>
-                                            <TextRuns>
-                                              <TextRun>
-                                                <Value>=Fields!Remaining_Amt___LCY_.Value</Value>
-                                                <Style>
-                                                  <FontFamily>Calibri</FontFamily>
-                                                  <FontSize>9pt</FontSize>
-                                                  <Format>n2</Format>
-                                                </Style>
-                                              </TextRun>
-                                            </TextRuns>
-                                            <Style>
-                                              <TextAlign>Center</TextAlign>
-                                            </Style>
-                                          </Paragraph>
-                                        </Paragraphs>
-                                        <rd:DefaultName>Textbox36</rd:DefaultName>
                                         <Style>
                                           <Border>
                                             <Style>Solid</Style>
@@ -1835,7 +1701,6 @@ Cstr(Fields!Address.Value) + Chr(177)
                               <TablixMember />
                               <TablixMember />
                               <TablixMember />
-                              <TablixMember />
                             </TablixMembers>
                           </TablixColumnHierarchy>
                           <TablixRowHierarchy>
@@ -1918,9 +1783,8 @@ Cstr(Fields!Address.Value) + Chr(177)
               <BreakLocation>End</BreakLocation>
             </PageBreak>
             <Top>0.56705cm</Top>
-            <Left>0cm</Left>
             <Height>4.54334cm</Height>
-            <Width>28.30864cm</Width>
+            <Width>28.77294cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1948,7 +1812,6 @@ Cstr(Fields!Address.Value) + Chr(177)
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox2</rd:DefaultName>
-                <Top>0cm</Top>
                 <Height>0.6441cm</Height>
                 <Width>2.76376cm</Width>
                 <Style>
@@ -2272,7 +2135,6 @@ Cstr(Fields!Address.Value) + Chr(177)
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>5.32954cm</Top>
-            <Left>0cm</Left>
             <Height>2.76187cm</Height>
             <Width>19.70299cm</Width>
             <ZIndex>2</ZIndex>
@@ -2509,7 +2371,6 @@ Cstr(Fields!Address.Value) + Chr(177)
                   </ReportItems>
                   <KeepTogether>true</KeepTogether>
                   <Top>0.71486cm</Top>
-                  <Left>0cm</Left>
                   <Height>2.57795cm</Height>
                   <Width>9.95469cm</Width>
                   <ZIndex>1</ZIndex>
@@ -2521,8 +2382,6 @@ Cstr(Fields!Address.Value) + Chr(177)
                 </Rectangle>
               </ReportItems>
               <KeepTogether>true</KeepTogether>
-              <Top>0cm</Top>
-              <Left>0cm</Left>
               <Height>3.57856cm</Height>
               <Width>28.85051cm</Width>
               <Style>
@@ -3531,6 +3390,12 @@ RQAUUUUUUUUAFFFFFFFFABRRRRRRRQAUUUUUUUUAFFFFFFFFABRRRRRRRQAUUUUUUUUAFFFFFFFFABRR
         </Field>
         <Field Name="Shiptoname">
           <DataField>Shiptoname</DataField>
+        </Field>
+        <Field Name="Posting_Date">
+          <DataField>Posting_Date</DataField>
+        </Field>
+        <Field Name="OpenBalanceDate">
+          <DataField>OpenBalanceDate</DataField>
         </Field>
       </Fields>
       <Query>
