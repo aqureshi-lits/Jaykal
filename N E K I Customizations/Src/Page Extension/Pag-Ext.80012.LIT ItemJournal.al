@@ -16,6 +16,7 @@ pageextension 80012 "LIT ItemJournal" extends "Item Journal"
             // {
             //     ApplicationArea = all;
             // }
+
         }
     }
 

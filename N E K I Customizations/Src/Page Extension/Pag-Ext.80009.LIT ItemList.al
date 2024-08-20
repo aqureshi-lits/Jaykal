@@ -267,7 +267,56 @@ pageextension 80009 "LIT ItemList" extends "Item List"
                 Scope = Repeater;
                 ToolTip = 'Set up the different units that the item can be traded in, such as piece, box, or hour.';
             }
+            //Invoice Lines
+            action("Pstd Sales Invoice Lines")
+            {
+                Caption = 'Posted Sales Invoice Lines';
+                Image = Line;
+                ApplicationArea = All;
+                RunObject = page "Posted Sales Invoice Lines";
+                RunPageLink = "No." = field("No.");
+                trigger OnAction()
+                begin
 
+                end;
+            }
+            action("Pstd Purch Invoice Lines")
+            {
+                Caption = 'Posted Purchase Invoice Lines';
+                Image = Line;
+                ApplicationArea = All;
+                RunObject = page "Posted Purchase Invoice Lines";
+                RunPageLink = "No." = field("No.");
+                trigger OnAction()
+                begin
+
+                end;
+            }
+            //CR Memo
+            action("Pstd Sales Cr Lines")
+            {
+                Caption = 'Posted Sales Credit Memo Lines';
+                Image = Line;
+                ApplicationArea = All;
+                RunObject = page "Posted Sales Credit Memo Lines";
+                RunPageLink = "No." = field("No.");
+                trigger OnAction()
+                begin
+
+                end;
+            }
+            action("Pstd Purch Cr Lines")
+            {
+                Caption = 'Posted Purchase Credit Memo Lines';
+                Image = Line;
+                ApplicationArea = All;
+                RunObject = page "Posted Purchase Cr. Memo Lines";
+                RunPageLink = "No." = field("No.");
+                trigger OnAction()
+                begin
+
+                end;
+            }
         }
 
         addafter(Category_Category6)
@@ -299,7 +348,18 @@ pageextension 80009 "LIT ItemList" extends "Item List"
                 actionref("&Units of Measure 1"; "&Units of Measure1")
                 {
                 }
-
+                actionref("Pstd Sales Invoice Lines1"; "Pstd Sales Invoice Lines")
+                {
+                }
+                actionref("Pstd Purch Invoice Lines1"; "Pstd Purch Invoice Lines")
+                {
+                }
+                actionref("Pstd Sales Cr Lines1"; "Pstd Sales Cr Lines")
+                {
+                }
+                actionref("Pstd Purch Cr Lines1"; "Pstd Purch Cr Lines")
+                {
+                }
 
             }
 
