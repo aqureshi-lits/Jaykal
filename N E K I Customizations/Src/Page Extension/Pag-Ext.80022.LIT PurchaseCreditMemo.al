@@ -49,6 +49,13 @@ pageextension 80022 "LIT PurchaseCreditMemo" extends "Purchase Credit Memo"
                 ApplicationArea = All;
             }
         }
+        addafter("Your Reference")
+        {
+            field("Purchase Type"; Rec."Purchase Type")
+            {
+                ApplicationArea = All;
+            }
+        }
     }
 
     actions
