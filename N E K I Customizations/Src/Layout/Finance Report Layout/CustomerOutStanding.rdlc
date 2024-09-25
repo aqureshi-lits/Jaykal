@@ -1114,7 +1114,7 @@ Cstr(Fields!Address.Value) + Chr(177)
                                           <Paragraph>
                                             <TextRuns>
                                               <TextRun>
-                                                <Value>=iif(Fields!Posting_Date.Value &lt;= Fields!OpenBalanceDate.Value, Fields!VendorPostingDate.Value, Fields!Posting_Date.Value)</Value>
+                                                <Value>=Fields!OutStandingDate.Value</Value>
                                                 <Style>
                                                   <FontFamily>Calibri</FontFamily>
                                                   <FontSize>9pt</FontSize>
@@ -1714,12 +1714,20 @@ Cstr(Fields!Address.Value) + Chr(177)
                                 </Group>
                                 <SortExpressions>
                                   <SortExpression>
+                                    <Value>=Fields!OutStandingDate.Value</Value>
+                                  </SortExpression>
+                                  <SortExpression>
                                     <Value>=Fields!Vendor_Code.Value</Value>
                                   </SortExpression>
                                 </SortExpressions>
                                 <TablixMembers>
                                   <TablixMember>
                                     <Group Name="Details" />
+                                    <SortExpressions>
+                                      <SortExpression>
+                                        <Value>=Fields!OutStandingDate.Value</Value>
+                                      </SortExpression>
+                                    </SortExpressions>
                                     <TablixMembers>
                                       <TablixMember />
                                     </TablixMembers>
@@ -1784,7 +1792,7 @@ Cstr(Fields!Address.Value) + Chr(177)
             </PageBreak>
             <Top>0.56705cm</Top>
             <Height>4.54334cm</Height>
-            <Width>28.77294cm</Width>
+            <Width>28.77295cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -3396,6 +3404,9 @@ RQAUUUUUUUUAFFFFFFFFABRRRRRRRQAUUUUUUUUAFFFFFFFFABRRRRRRRQAUUUUUUUUAFFFFFFFFABRR
         </Field>
         <Field Name="OpenBalanceDate">
           <DataField>OpenBalanceDate</DataField>
+        </Field>
+        <Field Name="OutStandingDate">
+          <DataField>OutStandingDate</DataField>
         </Field>
       </Fields>
       <Query>

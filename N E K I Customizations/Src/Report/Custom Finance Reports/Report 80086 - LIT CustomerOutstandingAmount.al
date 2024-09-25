@@ -264,6 +264,8 @@ report 80086 "LIT CustomerOutstandingAmount"
                 { }
                 column(OpenBalanceDate; OpenBalanceDate)
                 { }
+                column(OutStandingDate; OutStandingDate)
+                { }
                 // column(PartNo_PurchaseLine; "No.")
                 // {
                 // }
@@ -397,7 +399,17 @@ report 80086 "LIT CustomerOutstandingAmount"
                     GLEntry.SetRange("Document Type", DataItem9."Document Type");
                     if GLEntry.FindSet() then begin
 
+                    end;
+                    //iif(Fields!Posting_Date.Value <= Fields!OpenBalanceDate.Value, 
+                    //Fields!VendorPostingDate.Value, Fields!Posting_Date.Value)
+
+                    Clear(OutStandingDate);
+                    if ("Posting Date" <= OpenBalanceDate) then begin
+                        OutStandingDate := DataItem9."Document Date";
                     end
+                    else begin
+                        OutStandingDate := DataItem9."Posting Date";
+                    end;
                 end;
 
                 trigger OnPreDataItem()
@@ -504,6 +516,8 @@ report 80086 "LIT CustomerOutstandingAmount"
                 //     UNTIL PurchLine.NEXT = 0;
                 // END;
 
+
+
             end;
 
             trigger OnPreDataItem()
@@ -583,6 +597,7 @@ report 80086 "LIT CustomerOutstandingAmount"
         PricesIncludingVAT: Boolean;
         srno: Integer;
         OpenBalanceDate: Date;
+        OutStandingDate: Date;
         Gdoc: Code[20];
         VATAmt: Decimal;
         totvatamnt: Decimal;
