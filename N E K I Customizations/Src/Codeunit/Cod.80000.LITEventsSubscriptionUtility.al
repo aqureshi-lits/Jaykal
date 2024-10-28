@@ -1,6 +1,7 @@
 codeunit 80000 "LITEvents Subscription Utility"
 {
     EventSubscriberInstance = StaticAutomatic;
+    Permissions = tabledata "Sales Shipment Line" = RIMD, tabledata "Sales Shipment Header" = RIMD;
 
     trigger OnRun()
     begin
@@ -336,4 +337,105 @@ codeunit 80000 "LITEvents Subscription Utility"
     end;
 
 
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnAfterInsertShipmentLine', '', true, true)]
+    local procedure OnAfterInsertShipmentLine(PreviewMode: Boolean; var SalesHeader: Record "Sales Header"; var SalesLine: Record "Sales Line"; var SalesShptLine: Record "Sales Shipment Line"; xSalesLine: Record "Sales Line")
+    var
+        SalesLineGet: Record "Sales Line";
+        VATAmount: Decimal;
+        LineDiscountPercent: Decimal;
+        LineDiscountAmount: Decimal;
+    begin
+        // comment code b/c in case of partial shipment Amount & Amount Incl code is not getting
+        // IF PreviewMode = false THEN begin
+        //     SalesShptLine."LIT Order Amount" := Abs(SalesLine.Amount);
+        //     SalesShptLine."LIT Order Amount Incl. VAT" := Abs(SalesLine."Amount Including VAT");
+        //     SalesShptLine.Modify(true);
+        // end;
+        // comment code b/c in case of partial shipment Amount & Amount Incl code is not getting
+
+        IF PreviewMode = false THEN begin
+
+            SalesLineGet.Reset();
+            SalesLineGet.SetRange(SalesLineGet."Document Type", SalesLine."Document Type");
+            SalesLineGet.SetRange(SalesLineGet."Document No.", SalesLine."Document No.");
+            SalesLineGet.SetRange(SalesLineGet."Line No.", SalesLine."Line No.");
+            if SalesLineGet.FindSet() then begin
+
+                if SalesShptLine.Quantity > 0 then begin
+                    // SalesShptLine."LIT Order Amount" := Abs(SalesLineGet.Amount);
+                    // SalesShptLine."LIT Order Amount Incl. VAT" := Abs(SalesLineGet."Amount Including VAT");
+                    // SalesShptLine.Modify(true);
+
+                    if SalesHeader."Prices Including VAT" = true then begin
+
+                        Clear(LineDiscountPercent);
+                        Clear(LineDiscountAmount);
+                        if SalesLineGet."Line Discount Amount" > 0 then begin
+                            LineDiscountAmount := Round((Abs(SalesLineGet."Unit Price" / SalesLineGet."Line Discount %")), 0.01, '>');
+                            // LineDiscountAmount := Abs(SalesLineGet."Unit Price" / SalesLineGet."Line Discount %");
+                        end;
+
+                        Clear(VATAmount);
+                        // VATAmount := Round((Abs(SalesLineGet."Unit Price" - LineDiscountAmount) * (SalesLineGet."VAT %" / 100)), 0.01, '>');
+                        VATAmount := Abs(SalesLineGet."Unit Price" - LineDiscountAmount) * (SalesLineGet."VAT %" / 100);
+
+
+                        SalesShptLine."LIT Order Unit Price" := SalesLineGet."Unit Price";
+                        SalesShptLine."LIT Order Amount" := Abs(SalesShptLine.Quantity) * (Abs(SalesLineGet."Unit Price" - LineDiscountAmount) - Abs(VATAmount));//Abs(SalesLineGet.Amount);
+                        SalesShptLine."LIT Order Amount Incl. VAT" := Abs(SalesShptLine.Quantity) * Abs(SalesLineGet."Unit Price" - LineDiscountAmount);//Abs(SalesLineGet."Amount Including VAT");
+                        SalesShptLine.Modify(true);
+                    end
+                    else begin
+
+                        Clear(LineDiscountPercent);
+                        Clear(LineDiscountAmount);
+                        if SalesLineGet."Line Discount Amount" > 0 then begin
+                            LineDiscountAmount := Round((Abs(SalesLineGet."Unit Price" / SalesLineGet."Line Discount %")), 0.01, '>');
+                            // LineDiscountAmount := Abs(SalesLineGet."Unit Price" / SalesLineGet."Line Discount %");
+                        end;
+
+                        Clear(VATAmount);
+                        // VATAmount := Round((Abs(SalesLineGet."Unit Price" - LineDiscountAmount) * (SalesLineGet."VAT %" / 100)), 0.01, '>');
+                        VATAmount := Abs(SalesLineGet."Unit Price" - LineDiscountAmount) * (SalesLineGet."VAT %" / 100);
+
+                        SalesShptLine."LIT Order Unit Price" := SalesLineGet."Unit Price";
+                        SalesShptLine."LIT Order Amount" := Abs(SalesShptLine.Quantity) * Abs(SalesLineGet."Unit Price" - LineDiscountAmount);//Abs(SalesLineGet.Amount);
+                        SalesShptLine."LIT Order Amount Incl. VAT" := Abs(SalesShptLine.Quantity) * (Abs(SalesLineGet."Unit Price" - LineDiscountAmount) + Abs(VATAmount));//Abs(SalesLineGet."Amount Including VAT");
+                        SalesShptLine.Modify(true);
+                    end;
+
+                end;
+            end;
+
+        end;
+
+
+    end;
+
+
+
+
+    // [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnInsertShipmentLineOnAfterInitQuantityFields', '', true, true)]
+    // local procedure OnAfterInsertShipmentLine1(var SalesLine: Record "Sales Line"; var SalesShptLine: Record "Sales Shipment Line"; var xSalesLine: Record "Sales Line")
+    // var
+    //     ff: Decimal;
+    // begin
+    //     //IF PreviewMode = false THEN begin
+    //     ff := xSalesLine.Amount;
+
+    //     SalesShptLine."LIT Order Amount" := Abs(SalesLine.Amount);
+    //     SalesShptLine."LIT Order Amount Incl. VAT" := Abs(SalesLine."Amount Including VAT");
+    //     // SalesShptLine.Modify(true);
+
+    //     // end;
+
+
+    // end;
+
+    [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post", 'OnAfterInsertShipmentHeader', '', true, true)]
+    local procedure MyProcedure(var SalesHeader: Record "Sales Header"; var SalesShipmentHeader: Record "Sales Shipment Header")
+    begin
+        SalesShipmentHeader."LIT Order Discount Value" := SalesHeader."Invoice Discount Value";
+        SalesShipmentHeader.Modify(true);
+    end;
 }

@@ -16,6 +16,27 @@ pageextension 80032 "LIT PostedSalesShipment" extends "Posted Sales Shipment"
                 Importance = Additional;
             }
         }
+        addafter("External Document No.")
+        {
+            field("LIT Order Discount Value"; Rec."LIT Order Discount Value")
+            {
+                ApplicationArea = All;
+            }
+            // field("LIT Order Discount Amount"; Rec."LIT Order Discount Amount")
+            // {
+            //     ApplicationArea = All;
+            // }
+
+
+            field("LIT Order Amount"; Rec."LIT Order Amount")
+            {
+                ApplicationArea = All;
+            }
+            field("LIT Order Amount Incl. VAT"; Rec."LIT Order Amount Incl. VAT")
+            {
+                ApplicationArea = All;
+            }
+        }
         addafter(General)
         {
             group("Other Invoicing Details")
