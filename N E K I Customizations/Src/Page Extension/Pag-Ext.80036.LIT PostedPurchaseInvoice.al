@@ -16,6 +16,10 @@ pageextension 80036 "LIT PostedPurchaseInvoice" extends "Posted Purchase Invoice
         }
         addafter("Responsibility Center")
         {
+            field("Purchase Type"; Rec."Purchase Type")
+            {
+                ApplicationArea = All;
+            }
             field("Importance Type"; Rec."LIT Importance Type")
             {
                 ApplicationArea = All;

@@ -11,6 +11,15 @@ pageextension 80027 "LIT PurchaseInvoiceListExt" extends "Purchase Invoices"
             }
 
         }
+
+        addafter("Vendor Invoice No.")
+        {
+            field("Purchase Type"; Rec."Purchase Type")
+            {
+                ApplicationArea = All;
+            }
+
+        }
     }
     actions
     {

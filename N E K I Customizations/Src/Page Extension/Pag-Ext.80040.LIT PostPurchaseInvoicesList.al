@@ -5,7 +5,10 @@ pageextension 80040 "LIT PostPurchaseInvoicesList" extends "Posted Purchase Invo
     {
         addafter(Amount)
         {
-
+            field("Purchase Type"; Rec."Purchase Type")
+            {
+                ApplicationArea = All;
+            }
 
             field("VAT Registration No."; Rec."VAT Registration No.")
             {

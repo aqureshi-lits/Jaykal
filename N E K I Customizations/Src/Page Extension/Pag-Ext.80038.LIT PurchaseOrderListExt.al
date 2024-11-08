@@ -5,12 +5,17 @@ pageextension 80038 "LIT PurchaseOrderListExt" extends "purchase order list"
     {
         addafter(Status)
         {
+            field("Purchase Type"; Rec."Purchase Type")
+            {
+                ApplicationArea = All;
+            }
             field("Importance Type"; Rec."LIT Importance Type")
             {
                 ApplicationArea = All;
             }
 
         }
+
     }
     actions
     {
