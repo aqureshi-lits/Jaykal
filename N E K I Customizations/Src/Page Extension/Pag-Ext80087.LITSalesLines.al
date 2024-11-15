@@ -10,6 +10,21 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
                 Caption = 'Sell-to Customer Name';
             }
         }
+
+        addafter("Document No.")
+        {
+            field("Posting Date"; Rec."Posting Date")
+            {
+                ApplicationArea = all;
+            }
+
+            field("Order Date"; Rec."Order Date")
+            {
+                ApplicationArea = all;
+            }
+        }
+
+
         addbefore(Quantity)
         {
             field("Appl.-from Item Entry"; Rec."Appl.-from Item Entry")
@@ -59,6 +74,11 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
         }
         addafter("Qty. to Ship")
         {
+
+            field("Unit Price"; Rec."Unit Price")
+            {
+                ApplicationArea = all;
+            }
             field("Qty. Shipped (Base)"; Rec."Qty. Shipped (Base)")
             {
                 ApplicationArea = All;

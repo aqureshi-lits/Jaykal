@@ -9,6 +9,14 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
             Editable = false;
         }
 
+        field(80002; "Order Date"; Date)
+        {
+            CalcFormula = lookup("Sales Header"."Order Date" where("Document Type" = field("Document Type"),
+                                                                      "No." = field("Document No.")));
+            Caption = 'Order Date';
+            FieldClass = FlowField;
+        }
+
         modify("Unit Price")
         {
             trigger OnAfterValidate()
