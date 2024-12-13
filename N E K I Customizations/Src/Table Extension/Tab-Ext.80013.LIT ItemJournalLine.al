@@ -22,8 +22,12 @@ tableextension 80013 "LIT ItemJournalLine" extends "Item Journal Line"
                 InventoryPostingGroup.TestField("LIT AdjGenProdPostingGroup");
                 Validate("Gen. Bus. Posting Group", InventoryPostingGroup."LIT AdjGenBusPostingGroup");
                 Validate("Gen. Prod. Posting Group", InventoryPostingGroup."LIT AdjGenProdPostingGroup");
-                Validate("Location Code", InventoryPostingGroup."LIT AdjLocation");
+                //  Validate("Location Code", InventoryPostingGroup."LIT AdjLocation");
                 // Rec.Insert(true);
+
+                if rec."Item No." <> '' then begin
+                    Validate("Location Code", InventoryPostingGroup."LIT AdjLocation");
+                end;
             end;
         }
     }

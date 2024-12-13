@@ -6,14 +6,15 @@
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Sandbox_23Oct2024",
+            "environmentName": "Sandbox_13Dec2024",
             "startupObjectId": 22,
             "startupObjectType": "Page",
             "breakOnError": true,
             "launchBrowser": true,
             "enableLongRunningSqlStatements": true,
             "enableSqlInformationDebugger": true,
-            "schemaUpdateMode": "ForceSync"
+            "schemaUpdateMode": "ForceSync",
+            "startupCompany": "NEKI General Trading Co. LLC"
         }
     ]
 }
