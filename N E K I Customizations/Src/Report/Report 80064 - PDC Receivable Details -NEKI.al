@@ -135,12 +135,12 @@ report 80064 "PDC Receivable Details - IAX"
     }
 
     var
-        CustRec: Record "18";
+        CustRec: Record 18;
         CustomerName: Text[50];
-        UserSetup: Record "91";
-        GenJournalBatch: Record "232";
+        UserSetup: Record 91;
+        GenJournalBatch: Record 232;
         GenJournalBatchName: Text[30];
-        BankAccount: Record "270";
+        BankAccount: Record 270;
         BankName: Text[50];
 }
 

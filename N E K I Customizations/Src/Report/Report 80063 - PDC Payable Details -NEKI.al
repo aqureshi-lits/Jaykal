@@ -135,12 +135,12 @@ report 80063 "PDC Payable Details - IAX"
     }
 
     var
-        VendorRec: Record "23";
+        VendorRec: Record 23;
         VendorName: Text[50];
-        UserSetup: Record "91";
-        GenJournalBatch: Record "232";
+        UserSetup: Record 91;
+        GenJournalBatch: Record 232;
         GenJournalBatchName: Text[30];
-        BankAccount: Record "270";
+        BankAccount: Record 270;
         BankName: Text[50];
 }
 

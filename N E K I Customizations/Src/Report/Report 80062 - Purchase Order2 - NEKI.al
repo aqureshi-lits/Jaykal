@@ -278,28 +278,28 @@ report 80062 "Purchase Order2 - IAX"
     end;
 
     var
-        CompanyInformation: Record "79";
-        ChkPrint: Report "1401";
+        CompanyInformation: Record 79;
+        ChkPrint: Report 1401;
         AmtToVend: Decimal;
         AmtInWord: array[2] of Text[80];
         srno: Integer;
         Gdoc: Code[20];
         VATAmt: Decimal;
         totvatamnt: Decimal;
-        VendRec: Record "23";
+        VendRec: Record 23;
         TRNno: Code[30];
-        LocationRec: Record "14";
+        LocationRec: Record 14;
         Name_Deliv: Text[60];
         Add_Del: Text[50];
         Add2_Del: Text[50];
         PhoneNo_Del: Code[20];
-        SalesPurc_Rec: Record "13";
+        SalesPurc_Rec: Record 13;
         PurchaserName: Text[40];
-        PurchLine: Record "39";
+        PurchLine: Record 39;
         TotalLineAmt: Decimal;
         TotalInvDisc: Decimal;
         CurrText: Text[10];
-        RespCent: Record "5714";
+        RespCent: Record 5714;
 
     procedure SetDoc(Ldoc: Code[20])
     begin

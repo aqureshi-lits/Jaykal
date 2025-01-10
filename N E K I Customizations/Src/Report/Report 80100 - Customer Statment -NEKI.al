@@ -753,8 +753,8 @@ report 80100 "LIT Customer Statement"
             trigger OnAfterGetRecord()
             begin
                 TempAgingBandBuf.DeleteAll();
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
-                CurrReport.FormatRegion := Language.GetFormatRegionOrDefault("Format Region");
+                CurrReport.Language := Language1.GetLanguageIdOrDefault("Language Code");
+                CurrReport.FormatRegion := Language1.GetFormatRegionOrDefault("Format Region");
                 FormatAddr.SetLanguageCode("Language Code");
                 PrintLine := false;
                 if PrintAllHavingBal and (not PrintAllHavingEntry) then
@@ -1119,7 +1119,7 @@ report 80100 "LIT Customer Statement"
         CustLedgerEntry: Record "Cust. Ledger Entry";
         DetailedCustLedgEntry2: Record "Detailed Cust. Ledg. Entry";
         TempAgingBandBuf: Record "Aging Band Buffer" temporary;
-        Language: Codeunit Language;
+        Language1: Codeunit Language;
         FormatAddr: Codeunit "Format Address";
         SegManagement: Codeunit SegManagement;
         PeriodLength: DateFormula;

@@ -2,7 +2,7 @@
   "id": "208a0d1f-1dad-446c-8d05-01825112b856",
   "name": "NEKI Customizations",
   "publisher": "LITS SERVICES",
-  "version": "23.0.0.36",
+  "version": "23.0.0.39",
   "brief": "NEKI Customizations for D365BC",
   "description": "NEKI Customizations for D365BC",
   "privacyStatement": "",
@@ -13,7 +13,7 @@
   "dependencies": [],
   "screenshots": [],
   "platform": "22.0.0.0",
-  "application": "22.0.0.0",
+  "application": "24.0.0.0",
   "idRanges": [
     {
       "from": 80000,
@@ -25,7 +25,7 @@
     "allowDownloadingSource": false,
     "includeSourceInSymbolFile": true
   },
-  "runtime": "11.0",
+  "runtime": "13.0",
   "features": [
     "NoImplicitWith"
   ]

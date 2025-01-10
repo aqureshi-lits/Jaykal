@@ -183,13 +183,13 @@ report 80057 "Goods Receipt Note"
         NTWT: Decimal;
         TOTALQTY: Decimal;
         DIFFWT: Decimal;
-        ItemRec: Record "27";
+        ItemRec: Record 27;
         ItemDesc: Text;
-        CURRNCY: Record "4";
+        CURRNCY: Record 4;
         CURRDESC: Text[20];
-        ITEM_VARIANT: Record "5401";
+        ITEM_VARIANT: Record 5401;
         cnt: Integer;
         TotalCount: Integer;
-        CompanyInformation: Record "79";
+        CompanyInformation: Record 79;
 }
 

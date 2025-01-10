@@ -86,9 +86,9 @@ report 80065 "Pending Job Summary"
     }
 
     var
-        COMINFO: Record "79";
+        COMINFO: Record 79;
         MAXDATE: Date;
-        SALES_LINES: Record "37";
+        SALES_LINES: Record 37;
         QTYORDERED: Decimal;
         QTYSHIPPED: Decimal;
         QTY_OUTSTANDING: Decimal;

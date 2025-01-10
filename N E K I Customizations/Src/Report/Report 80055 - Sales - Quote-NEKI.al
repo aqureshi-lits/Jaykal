@@ -1060,7 +1060,7 @@ report 80055 "Sales - Quote-IAX"
         SalesSetup: Record 311;
         Cust: Record 18;
         RespCenter: Record 5714;
-        Language: Record 8;
+        Language1: Record 8;
         VATClause: Record 560;
         FormatAddr: Codeunit 365;
         FormatDocument: Codeunit 368;
@@ -1132,8 +1132,10 @@ report 80055 "Sales - Quote-IAX"
         SalesCmtLine: Record 44;
 
     local procedure InitLogInteraction()
+    var
+        aa: report "Standard Sales - Quote";
     begin
-        LogInteraction := SegManagement.FindInteractTmplCode(1) <> '';
+        LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Sales Qte.") <> '';
     end;
 
     local procedure DocumentCaption(): Text[250]

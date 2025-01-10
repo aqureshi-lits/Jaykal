@@ -548,7 +548,7 @@ report 80058 "Purchase Invoice-IAX"
 
                         trigger OnPreDataItem()
                         var
-                            PurchInvLine: Record "123";
+                            PurchInvLine: Record 123;
                             VATIdentifier: Code[20];
                         begin
                             VATAmountLine.DELETEALL;
@@ -873,7 +873,7 @@ report 80058 "Purchase Invoice-IAX"
         DimSetEntry1: Record 480;
         DimSetEntry2: Record 480;
         RespCenter: Record 5714;
-        Language: Record 8;
+        Language1: Record 8;
         CurrExchRate: Record 330;
         FormatAddr: Codeunit 365;
         FormatDocument: Codeunit 368;
@@ -967,8 +967,10 @@ report 80058 "Purchase Invoice-IAX"
     end;
 
     local procedure InitLogInteraction()
+    var
+
     begin
-        LogInteraction := SegManagement.FindInteractTmplCode(14) <> '';
+        LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Purch. Inv.") <> '';
     end;
 
     procedure InitializeRequest(NewNoOfCopies: Integer; NewShowInternalInfo: Boolean; NewLogInteraction: Boolean)

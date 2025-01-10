@@ -116,11 +116,11 @@ report 80066 "Pending Order Summary"
     }
 
     var
-        PH: Record "38";
-        compInfo: Record "79";
+        PH: Record 38;
+        compInfo: Record 79;
         CompName: Text[100];
         CURR_CODE: Code[20];
         AllFilters: Text[100];
-        VendRec: Record "23";
+        VendRec: Record 23;
 }
 

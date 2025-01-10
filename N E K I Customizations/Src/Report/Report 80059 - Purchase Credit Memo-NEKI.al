@@ -803,8 +803,10 @@ report 80059 "Purchase Credit Memo-IAX"
         end;
 
         trigger OnOpenPage()
+        var
+            Aa: report "Purchase - Credit Memo";
         begin
-            LogInteraction := SegManagement.FindInteractTmplCode(16) <> '';
+            LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Purch. Cr. Memo") <> '';
             LogInteractionEnable := LogInteraction;
         end;
     }
@@ -848,7 +850,7 @@ report 80059 "Purchase Credit Memo-IAX"
         DimSetEntry1: Record 480;
         DimSetEntry2: Record 480;
         RespCenter: Record 5714;
-        Language: Record 8;
+        Language1: Record 8;
         CurrExchRate: Record 330;
         FormatAddr: Codeunit 365;
         FormatDocument: Codeunit 368;
@@ -933,7 +935,7 @@ report 80059 "Purchase Credit Memo-IAX"
 
     procedure InitLogInteraction()
     begin
-        LogInteraction := SegManagement.FindInteractTmplCode(16) <> '';
+        LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Purch. Cr. Memo") <> '';
     end;
 
     local procedure DocumentCaption(): Text[250]

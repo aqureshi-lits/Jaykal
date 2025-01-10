@@ -696,7 +696,7 @@ report 80043 "LIT Statement Of Accounts 2"
             trigger OnAfterGetRecord()
             begin
                 TempAgingBandBuf.DeleteAll();
-                CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                CurrReport.Language := Language1.GetLanguageIdOrDefault("Language Code");
                 PrintLine := false;
                 if PrintAllHavingBal and (not PrintAllHavingEntry) then
                     PrintLine := true;
@@ -999,7 +999,7 @@ report 80043 "LIT Statement Of Accounts 2"
         CustLedgerEntry: Record "Cust. Ledger Entry";
         DetailedCustLedgEntry2: Record "Detailed Cust. Ledg. Entry";
         TempAgingBandBuf: Record "Aging Band Buffer" temporary;
-        Language: Codeunit Language;
+        Language1: Codeunit Language;
         FormatAddr: Codeunit "Format Address";
         SegManagement: Codeunit SegManagement;
         PrintedCustomersList: List of [Code[20]];
@@ -1219,8 +1219,10 @@ report 80043 "LIT Statement Of Accounts 2"
     end;
 
     local procedure InitInteractionLog()
+    var
+        AA: Report "Standard Statement";
     begin
-        LogInteraction := SegManagement.FindInteractTmplCode(7) <> '';
+        LogInteraction := SegManagement.FindInteractionTemplateCode(Enum::"Interaction Log Entry Document Type"::"Sales Stmnt.") <> '';
     end;
 
     local procedure VerifyDates()
