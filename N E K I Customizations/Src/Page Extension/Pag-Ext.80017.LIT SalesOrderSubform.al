@@ -7,6 +7,14 @@ pageextension 80017 "LIT SalesOrderSubform" extends "Sales Order Subform"
         {
 
         }
+
+        addafter("Location Code")
+        {
+            field("Salesperson Code"; Rec."Salesperson Code")
+            {
+                ApplicationArea = all;
+            }
+        }
         addafter("VAT Prod. Posting Group")
         {
             //This field is already defined in new version

@@ -11,6 +11,14 @@ pageextension 80018 "LIT SalesInvoiceSubform" extends "Sales Invoice Subform"
         {
             Editable = false;
         }
+
+        addafter("Location Code")
+        {
+            field("Salesperson Code"; Rec."Salesperson Code")
+            {
+                ApplicationArea = all;
+            }
+        }
     }
 
     actions

@@ -17,6 +17,14 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
             FieldClass = FlowField;
         }
 
+        field(80003; "Salesperson Code"; Code[20])
+        {
+            CalcFormula = lookup("Sales Header"."Salesperson Code" where("Document Type" = field("Document Type"),
+                                                                      "No." = field("Document No.")));
+            Caption = 'Salesperson Code';
+            FieldClass = FlowField;
+        }
+
         modify("Unit Price")
         {
             trigger OnAfterValidate()
