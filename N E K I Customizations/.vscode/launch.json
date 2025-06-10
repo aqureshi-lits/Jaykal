@@ -6,7 +6,7 @@
             "request": "launch",
             "type": "al",
             "environmentType": "Sandbox",
-            "environmentName": "Sandbox_13Dec2024",
+            "environmentName": "WAJ10Jun25",
             "startupObjectId": 22,
             "startupObjectType": "Page",
             "breakOnError": true,

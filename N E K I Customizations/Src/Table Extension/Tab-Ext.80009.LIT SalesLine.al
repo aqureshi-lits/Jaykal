@@ -67,6 +67,14 @@ tableextension 80009 "LIT SalesLine" extends "Sales Line" //OriginalId
             end;
         }
 
+        field(80004; "External Document No."; Code[35])
+        {
+            CalcFormula = lookup("Sales Header"."External Document No." where("Document Type" = field("Document Type"),
+                                                                      "No." = field("Document No.")));
+            Caption = 'External Document No.';
+            FieldClass = FlowField;
+        }
+
     }
     // trigger OnBeforeModify()
     // var

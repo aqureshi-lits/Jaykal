@@ -22,6 +22,15 @@ pageextension 80087 "LIT Sales Lines" extends "Sales Lines"
             {
                 ApplicationArea = all;
             }
+            field("Salesperson Code"; Rec."Salesperson Code")
+            {
+                ApplicationArea = All;
+            }
+            field("External Document No."; Rec."External Document No.")
+            {
+                ApplicationArea = All;
+            }
+
         }
 
 

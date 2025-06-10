@@ -4,6 +4,8 @@ codeunit 80000 "LITEvents Subscription Utility"
     Permissions = tabledata "Sales Shipment Line" = RIMD, tabledata "Sales Shipment Header" = RIMD;
 
     trigger OnRun()
+    var
+
     begin
 
     end;

@@ -3,7 +3,7 @@ report 80054 "Posted Sales Inv. - IAX"
     // version IAX Frz
 
     DefaultLayout = RDLC;
-    RDLCLayout = './Src/Layout/RGS Reports/Posted Sales Inv. - IAX.rdlc';
+    RDLCLayout = './Src/Layout/RGS Reports/Posted Sales Inv. - IAXV3.rdlc';
     PreviewMode = PrintLayout;
 
     dataset
@@ -200,6 +200,67 @@ report 80054 "Posted Sales Inv. - IAX"
             column(AmountIncludingVAT_SalesInvoiceHeader; "Sales Invoice Header"."Amount Including VAT")
             {
             }
+
+            column(ShipmentNoArray1; ShipmentNoArray[1])
+            {
+            }
+            column(ShipmentNoArray2; ShipmentNoArray[2])
+            {
+            }
+            column(ShipmentNoArray3; ShipmentNoArray[3])
+            {
+            }
+            column(ShipmentNoArray4; ShipmentNoArray[4])
+            {
+            }
+            column(ShipmentNoArray5; ShipmentNoArray[5])
+            {
+            }
+            column(ShipmentNoArray6; ShipmentNoArray[6])
+            {
+            }
+            column(ShipmentNoArray7; ShipmentNoArray[7])
+            {
+            }
+            column(ShipmentNoArray8; ShipmentNoArray[8])
+            {
+            }
+            column(ShipmentNoArray9; ShipmentNoArray[9])
+            {
+            }
+            column(ShipmentNoArray10; ShipmentNoArray[10])
+            {
+            }
+            column(ShipmentNoArray11; ShipmentNoArray[11])
+            {
+            }
+            column(ShipmentNoArray12; ShipmentNoArray[12])
+            {
+            }
+            column(ShipmentNoArray13; ShipmentNoArray[13])
+            {
+            }
+            column(ShipmentNoArray14; ShipmentNoArray[14])
+            {
+            }
+            column(ShipmentNoArray15; ShipmentNoArray[15])
+            {
+            }
+            column(ShipmentNoArray16; ShipmentNoArray[16])
+            {
+            }
+            column(ShipmentNoArray17; ShipmentNoArray[17])
+            {
+            }
+            column(ShipmentNoArray18; ShipmentNoArray[18])
+            {
+            }
+            column(ShipmentNoArray19; ShipmentNoArray[19])
+            {
+            }
+            column(ShipmentNoArray20; ShipmentNoArray[20])
+            {
+            }
             dataitem("Sales Invoice Line"; "Sales Invoice Line")
             {
                 DataItemLink = "Document No." = FIELD("No.");
@@ -317,8 +378,35 @@ report 80054 "Posted Sales Inv. - IAX"
                 end;
             }
 
+            // dataitem("Sales Shipment Header"; "Sales Shipment Header")
+            // {
+            //     DataItemLink = "Order No." = field("Order No.");
+
+            //     column(ShipmentNo_; "No.") { }
+
+            // }
+
             trigger OnAfterGetRecord()
+
+            var
+                j: Integer;
+
             begin
+                j := 1;
+                Clear(SalesShpment);
+                Clear(ShipmentNoArray);
+                //
+                SalesShpment.RESET;
+                SalesShpment.SETFILTER(SalesShpment."Order No.", "Sales Invoice Header"."Order No.");
+                IF SalesShpment.FindSet() and ("Sales Invoice Header"."Order No." <> '') THEN BEGIN
+                    repeat
+                        ShipmentNoArray[j] := SalesShpment."No.";
+                        j += 1;
+                    until SalesShpment.Next = 0;
+                END;
+
+                //
+
                 IF "Sales Invoice Header"."Order No." <> '' THEN
                     SalesOrderNo := "Sales Invoice Header"."Order No."
                 ELSE
@@ -417,6 +505,7 @@ report 80054 "Posted Sales Inv. - IAX"
             end;
         }
     }
+    //////
 
     requestpage
     {
@@ -450,6 +539,8 @@ report 80054 "Posted Sales Inv. - IAX"
     end;
 
     var
+        ShipmentNoArray: array[20] of Text;
+        SalesShpment: record "Sales Shipment Header";
         CompanyInformation: Record 79;
         CustomerRec: Record 18;
         ShiptoAddress: Record 222;

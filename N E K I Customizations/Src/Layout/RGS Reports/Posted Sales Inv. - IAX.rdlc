@@ -5097,6 +5097,9 @@ End Function</Code>
         <Field Name="LineComments">
           <DataField>LineComments</DataField>
         </Field>
+        <Field Name="ShipmentNo_">
+          <DataField>ShipmentNo_</DataField>
+        </Field>
       </Fields>
       <Query>
         <DataSourceName>DataSource</DataSourceName>
