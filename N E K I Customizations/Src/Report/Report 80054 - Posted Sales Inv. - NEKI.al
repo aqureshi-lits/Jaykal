@@ -3,7 +3,7 @@ report 80054 "Posted Sales Inv. - IAX"
     // version IAX Frz
 
     DefaultLayout = RDLC;
-    RDLCLayout = './Src/Layout/RGS Reports/Posted Sales Inv. - IAXV3.rdlc';
+    RDLCLayout = './Src/Layout/RGS Reports/Posted Sales Inv. - IAXV4.rdlc';
     PreviewMode = PrintLayout;
 
     dataset
@@ -324,10 +324,45 @@ report 80054 "Posted Sales Inv. - IAX"
                 {
                 }
 
+
+
                 trigger OnAfterGetRecord()
+                var
+                // SalesShptLine: Record "Sales Shipment Line";
+                // ItemLedgEntry: Record "Item Ledger Entry";
+                // ValueEntry: Record "Value Entry";
+                // IsDuplicate: Boolean;
                 begin
 
+                    // // j := 1 + j;
+                    // // Message(Format(j));
+                    // IsDuplicate := false;
+                    // //Clear(SalesShpment);
+                    // // Clear(ShipmentNoArray);
+                    // "Sales Invoice Line".FilterPstdDocLineValueEntries(ValueEntry);
+                    // if ValueEntry.FindSet() then
+                    //     repeat
+                    //         ItemLedgEntry.Get(ValueEntry."Item Ledger Entry No.");
+                    //         if ItemLedgEntry."Document Type" = ItemLedgEntry."Document Type"::"Sales Shipment" then
+                    //             if SalesShptLine.Get(ItemLedgEntry."Document No.", ItemLedgEntry."Document Line No.") then begin
 
+                    //                 for i := 1 to 20 do begin
+                    //                     if ShipmentNoArray[i] = SalesShptLine."Document No." then begin
+                    //                         IsDuplicate := true;
+                    //                     end;
+                    //                 end;
+
+                    //                 if not IsDuplicate then begin
+                    //                     if ShipmentNoArray[j] = '' then begin
+                    //                         ShipmentNoArray[j] := SalesShptLine."Document No.";
+                    //                         j += 1;
+                    //                     end;
+
+                    //                 end;
+
+                    //             end;
+                    //     until ValueEntry.Next() = 0;
+                    //// 
 
 
                     CLEAR(ChkPrint);
@@ -374,7 +409,7 @@ report 80054 "Posted Sales Inv. - IAX"
                     srno := 0;
                     VATAmt := 0;
                     totvatamnt := 0;
-                    ItemVat := 0
+                    ItemVat := 0;
                 end;
             }
 
@@ -389,21 +424,55 @@ report 80054 "Posted Sales Inv. - IAX"
             trigger OnAfterGetRecord()
 
             var
+                SalesShptLine: Record "Sales Shipment Line";
+                ItemLedgEntry: Record "Item Ledger Entry";
+                ValueEntry: Record "Value Entry";
+                IsDuplicate: Boolean;
+                SalesInvoiceLineRec: record "Sales Invoice Line";
                 j: Integer;
+                i: Integer;
 
             begin
+
                 j := 1;
-                Clear(SalesShpment);
+                // Message(Format(j));
+
+                Clear(SalesInvoiceLineRec);
                 Clear(ShipmentNoArray);
-                //
-                SalesShpment.RESET;
-                SalesShpment.SETFILTER(SalesShpment."Order No.", "Sales Invoice Header"."Order No.");
-                IF SalesShpment.FindSet() and ("Sales Invoice Header"."Order No." <> '') THEN BEGIN
+
+                SalesInvoiceLineRec.SetRange("Document No.", "Sales Invoice Header"."No.");
+                SalesInvoiceLineRec.SetRange(type, SalesInvoiceLineRec.type::Item);
+                SalesInvoiceLineRec.SetFilter(Quantity, '<> %1', 0);
+                if SalesInvoiceLineRec.FindSet() then begin
                     repeat
-                        ShipmentNoArray[j] := SalesShpment."No.";
-                        j += 1;
-                    until SalesShpment.Next = 0;
-                END;
+                        IsDuplicate := false;
+                        SalesInvoiceLineRec.FilterPstdDocLineValueEntries(ValueEntry);
+                        if ValueEntry.FindSet() then
+                            repeat
+                                ItemLedgEntry.Get(ValueEntry."Item Ledger Entry No.");
+                                if ItemLedgEntry."Document Type" = ItemLedgEntry."Document Type"::"Sales Shipment" then
+                                    if SalesShptLine.Get(ItemLedgEntry."Document No.", ItemLedgEntry."Document Line No.") then begin
+
+                                        for i := 1 to 20 do begin
+                                            if ShipmentNoArray[i] = SalesShptLine."Document No." then begin
+                                                IsDuplicate := true;
+                                                break;
+                                            end;
+                                        end;
+
+                                        if not IsDuplicate then begin
+
+                                            ShipmentNoArray[j] := SalesShptLine."Document No.";
+                                            j += 1;
+                                        end;
+
+                                    end;
+                            until ValueEntry.Next() = 0;
+                    until SalesInvoiceLineRec.Next = 0;
+                    // Message(Format(SalesInvoiceLineRec.Count));
+                end;
+
+                //// 
 
                 //
 
@@ -539,7 +608,7 @@ report 80054 "Posted Sales Inv. - IAX"
     end;
 
     var
-        ShipmentNoArray: array[20] of Text;
+        ShipmentNoArray: array[20] of Code[20];
         SalesShpment: record "Sales Shipment Header";
         CompanyInformation: Record 79;
         CustomerRec: Record 18;
@@ -579,6 +648,7 @@ report 80054 "Posted Sales Inv. - IAX"
         SalesOrderNo: Text[250];
         SalesCmtLine: Record 44;
         LineComments: Text[250];
+
 
     procedure SetDoc(Ldoc: Code[20])
     begin
