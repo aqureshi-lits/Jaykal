@@ -5,11 +5,11 @@ pageextension 80056 "LIT PurchaseLines" extends "Purchase Lines"
         // Add changes to page layout here
         addafter("Buy-from Vendor No.")
         {
-            field("Buy-from Vendor Name"; Rec."LIT Buy-from Vendor Name")
-            {
-                ApplicationArea = all;
-                Editable = false;
-            }
+            // field("Buy-from Vendor Name"; Rec."LIT Buy-from Vendor Name")
+            // {
+            //     ApplicationArea = all;
+            //     Editable = false;
+            // }
 
             field("Order Date"; Rec."Order Date")
             {
@@ -18,7 +18,16 @@ pageextension 80056 "LIT PurchaseLines" extends "Purchase Lines"
             }
 
 
+
+
         }
+
+        // modify("Buy-from Vendor Name")
+        // {
+        //     Visible = true;
+        // }
+
+        // moveafter("Buy-from Vendor No."; "Buy-from Vendor Name")
         addafter("Line Amount")
         {
             field("Currency Code"; Rec."Currency Code")

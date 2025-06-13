@@ -3,7 +3,7 @@ report 80054 "Posted Sales Inv. - IAX"
     // version IAX Frz
 
     DefaultLayout = RDLC;
-    RDLCLayout = './Src/Layout/RGS Reports/Posted Sales Inv. - IAXV4.rdlc';
+    RDLCLayout = './Src/Layout/RGS Reports/Posted Sales Inv. - IAXV5.rdlc';
     PreviewMode = PrintLayout;
 
     dataset
@@ -149,7 +149,7 @@ report 80054 "Posted Sales Inv. - IAX"
             column(City; CompanyInformation.City + ' -' + CompanyInformation."Country/Region Code")
             {
             }
-            column(CompPhone; 'Phone No. : ' + CompanyInformation."Phone No." + ', Fax No. : ' + CompanyInformation."Fax No.")
+            column(CompPhone; 'Phone No. : ' + CompanyInformation."Phone No.")
             {
             }
             column(Comp_Post; CompanyInformation."Post Code")

@@ -187,10 +187,10 @@ report 80043 "LIT Statement Of Accounts 2"
                 column(CurrReportPageNoCaption; CurrReportPageNoCaptionLbl)
                 {
                 }
-                column(CompanyLegalOffice; CompanyInfo.GetLegalOffice)
+                column(CompanyLegalOffice; LegalOfficeTxt)
                 {
                 }
-                column(CompanyLegalOffice_Lbl; CompanyInfo.GetLegalOfficeLbl)
+                column(CompanyLegalOffice_Lbl; LegalOfficeLbl)
                 {
                 }
 
@@ -928,6 +928,10 @@ report 80043 "LIT Statement Of Accounts 2"
     }
 
     trigger OnInitReport()
+    var
+
+        SOA: report "Standard Statement";
+        IsHandled: Boolean;
     begin
         GLSetup.Get();
         SalesSetup.Get();
@@ -952,6 +956,9 @@ report 80043 "LIT Statement Of Accounts 2"
                 end;
         end;
         LogInteractionEnable := true;
+
+        IsHandled := false;
+        OnInitReportForGlobalVariable(IsHandled, LegalOfficeTxt, LegalOfficeLbl);
     end;
 
     trigger OnPostReport()
@@ -980,6 +987,7 @@ report 80043 "LIT Statement Of Accounts 2"
 
     var
         //Adding variables By FA
+        LegalOfficeTxt, LegalOfficeLbl : Text;
         invoiceAmount: Decimal;
         RefundAmount: Decimal;
         PaymentAmount: Decimal;
@@ -1289,6 +1297,11 @@ report 80043 "LIT Statement Of Accounts 2"
 
     [IntegrationEvent(false, false)]
     local procedure OnCustLedgEntry2OnPreDataItemOnAfterSetFilters(var CustLedgEntry: Record "Cust. Ledger Entry")
+    begin
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnInitReportForGlobalVariable(var IsHandled: Boolean; var LegalOfficeTxt: Text; var LegalOfficeLbl: Text)
     begin
     end;
 }

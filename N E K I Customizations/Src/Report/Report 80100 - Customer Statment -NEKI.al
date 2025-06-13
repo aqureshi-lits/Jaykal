@@ -1072,12 +1072,7 @@ report 80100 "LIT Customer Statement"
 
         IsHandled := false;
         OnInitReportForGlobalVariable(IsHandled, LegalOfficeTxt, LegalOfficeLbl);
-#if not CLEAN23
-        if not IsHandled then begin
-            LegalOfficeTxt := CompanyInfo.GetLegalOffice();
-            LegalOfficeLbl := CompanyInfo.GetLegalOfficeLbl();
-        end;
-#endif
+
     end;
 
     trigger OnPostReport()

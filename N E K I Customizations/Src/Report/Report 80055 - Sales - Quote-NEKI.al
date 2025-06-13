@@ -146,16 +146,16 @@ report 80055 "Sales - Quote-IAX"
             column(CompanyVATRegistrationNo_Lbl; CompanyInfo.GetVATRegistrationNumberLbl)
             {
             }
-            column(CompanyLegalOffice; CompanyInfo.GetLegalOffice)
+            column(CompanyLegalOffice; LegalOfficeTxt)
             {
             }
-            column(CompanyLegalOffice_Lbl; CompanyInfo.GetLegalOfficeLbl)
+            column(CompanyLegalOffice_Lbl; LegalOfficeLbl)
             {
             }
-            column(CompanyCustomGiro; CompanyInfo.GetCustomGiro)
+            column(CompanyCustomGiro; CustomGiroTxt)
             {
             }
-            column(CompanyCustomGiro_Lbl; CompanyInfo.GetCustomGiroLbl)
+            column(CompanyCustomGiro_Lbl; CustomGiroLbl)
             {
             }
             column(CompanyLegalStatement; GetLegalStatement)
@@ -954,9 +954,15 @@ report 80055 "Sales - Quote-IAX"
         }
 
         trigger OnInit()
+        var
+            SQ: report "Standard Sales - Quote";
+            IsHandled: Boolean;
         begin
             LogInteractionEnable := TRUE;
             ArchiveDocument := SalesSetup."Archive Quotes" <> SalesSetup."Archive Quotes"::Never;
+
+            IsHandled := false;
+            OnInitReportForGlobalVariable(IsHandled, LegalOfficeTxt, LegalOfficeLbl, CustomGiroTxt, CustomGiroLbl, LegalStatementLbl);
         end;
 
         trigger OnOpenPage()
@@ -1130,6 +1136,7 @@ report 80055 "Sales - Quote-IAX"
         AmtToVend_Var: Decimal;
         LineComments: Text[250];
         SalesCmtLine: Record 44;
+        LegalOfficeTxt, LegalOfficeLbl, CustomGiroTxt, CustomGiroLbl, LegalStatementLbl : Text;
 
     local procedure InitLogInteraction()
     var
@@ -1178,6 +1185,11 @@ report 80055 "Sales - Quote-IAX"
         END;
         IF TotalAmountVAT <> 0 THEN
             ReportTotalsLine.Add(VATAmountLine.VATAmountText, TotalAmountVAT, FALSE, TRUE, FALSE);
+    end;
+
+    [IntegrationEvent(false, false)]
+    local procedure OnInitReportForGlobalVariable(var IsHandled: Boolean; var LegalOfficeTxt: Text; var LegalOfficeLbl: Text; var CustomGiroTxt: Text; var CustomGiroLbl: Text; var LegalStatementLbl: Text)
+    begin
     end;
 }
 
